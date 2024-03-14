@@ -527,7 +527,7 @@ because we know they are overlaying (you can check that with the raster extents)
 
 ```{r new-raster-import}
 ## ras_bio_asc_24 = DEM = digital elevation model
-ras_bio_asc_24 <- rast(x = paste0(maps_wd, "/bio_asc_24.asc"))  
+ras_bio_asc_24 <- rast(x = paste0(maps_wd, "/bio_asc_24.asc"))
 
 crs(ras_bio_asc_24)
 
@@ -607,7 +607,7 @@ Any idea what this kind of strange cell size could be? We will come to that late
 
 An important function is `crds()`, which returns the centroids of each raster cell:
 ```{r centroid}
-head(x = crds(ras_bio_asc_01_cr), n = 10) 
+head(x = crds(ras_bio_asc_01_cr), n = 10)
 ```
 
 
@@ -799,7 +799,7 @@ persp(Bor_dem_moll, xlab = "Easting", ylab = "Northing",
 You can now try all kinds of funny projections on your own, for example, use the Albers Equal Area projection with EPSG code 3085. Give it a try:
 
 ```{r}
-Bor_dem_AEA <- terra::project(ras_bio_asc_01_cr, 'EPSG:3085') 
+Bor_dem_AEA <- terra::project(ras_bio_asc_01_cr, 'EPSG:3085')
 
 persp(Bor_dem_AEA, xlab = "Easting", ylab = "Northing",
       zlab = "elevation", main = "Elevation model of Borneo",
@@ -914,12 +914,14 @@ You can easily access the cell information of the raster via `values()`
 ```{r change-raster-values}
 ## convert ras_bio_asc_01 to degree Celsius units (divide by 10)
 range(values(ras_bio_asc_01), na.rm = TRUE)
+range(values(ras_bio_asc_01/10), na.rm = TRUE)
 ```
 
 Visualise range of the values with a simple boxplot (see course 1 R Intro).
 
 ```{r raster-boxplot}
 boxplot(values(ras_bio_asc_01), na.rm = TRUE, outline = FALSE) ## outline = outliers
+boxplot(values(ras_bio_asc_01/10), na.rm = TRUE, outline = FALSE) ## outline = outliers
 ```
 
 Similarly, we can look at the distribution of the values in each single layer of a raster stack.
