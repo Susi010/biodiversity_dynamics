@@ -1,15 +1,15 @@
 # Ignore the directory
 
-data/data_borneo/IUCN_Mammal_Ranges
+data/data_berlin
+data/data_borneo
+data/data_move
 
 /R_helper_functions
-
+/img
 /output
-
-
-/R_exercises_solutions
+/R
+/R_exercises
 
 
 .Rproj.user
 .Rhistory
-R/Course6_demography_population_models/Course6_pop_analysis_solutions.Rmd
