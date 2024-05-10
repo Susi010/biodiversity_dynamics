@@ -9,9 +9,9 @@ editor: visual
 
 -   103 different bird species
 
--   Sampling period from 2000 to 2023 at Rietzer See
+-   Sampling period from 2000 to 2023 at nature conservation area "Rietzer See"
 
--   Analysis of survival and detection probability on 13
+-   Analysis of survival and detection probability of 13 bird species
 
 ## Phylogeny
 
@@ -29,41 +29,28 @@ Evolutionary relationship of 13 bird taxa for which estimation of survival and d
 
 ## Overview of characteristics
 
-+-----------------+-------------------------+------------------+-------------+------------+-------------------+--------------------+-----------------------+
+|                 |                         |                  |             |            |                   |                    |                       |
+|---------|---------|---------|---------|---------|---------|---------|---------|
 | Family          | Taxa                    | Max. age (years) | Length (cm) | Weight (g) | Breeding season   | Clutch size (eggs) | Breeding times (max.) |
-+-----------------+-------------------------+------------------+-------------+------------+-------------------+--------------------+-----------------------+
 | Emberizidae     | Rohrammer               | 12               | 14-17       | 10 -28     | April - August    | 4 -5               | 2                     |
-+-----------------+-------------------------+------------------+-------------+------------+-------------------+--------------------+-----------------------+
 |                 | Goldammer               | 13               | 16 - 17     | 20 - 36,5  | April - September | 3 -5               | 3                     |
-+-----------------+-------------------------+------------------+-------------+------------+-------------------+--------------------+-----------------------+
 | Passeridae      | Feldsperling            | 13               | 14 - 15     | 17 - 30    | April - January   | 2 - 7              | 4                     |
-+-----------------+-------------------------+------------------+-------------+------------+-------------------+--------------------+-----------------------+
 | Turdidae        | Amsel                   | 22               | 24 - 27     | 85 - 105   | March - September | 2 - 6              | 2                     |
-+-----------------+-------------------------+------------------+-------------+------------+-------------------+--------------------+-----------------------+
 | Muscicapi- dae  | Weißstern. Blaukehlchen | 11               | 13 - 15     | 17 - 20    | April - August    | 4 - 7              | 2                     |
-+-----------------+-------------------------+------------------+-------------+------------+-------------------+--------------------+-----------------------+
 | Paridae         | Blaumeise               |                  | 11 - 12     | 8 - 15     | April - June      | 7 - 13             | 3                     |
-+-----------------+-------------------------+------------------+-------------+------------+-------------------+--------------------+-----------------------+
 | Panuridae       | Bartmeise               | 6                | 14 - 17     | 11 - 21    | March - September | 4 - 8              | 4                     |
-+-----------------+-------------------------+------------------+-------------+------------+-------------------+--------------------+-----------------------+
 | Locustellidae   | Rohrschwirl             | 7                | 13 - 14     | 12 - 21    | April - July      | 4 - 6              | 2                     |
-+-----------------+-------------------------+------------------+-------------+------------+-------------------+--------------------+-----------------------+
 | Acrocephali-dae | Teichrohr-sänger        | 16               | 13          | 8 - 20     | May - August      | 3 - 5              | 2                     |
-+-----------------+-------------------------+------------------+-------------+------------+-------------------+--------------------+-----------------------+
 |                 | Drosselrohr-sänger      | 10               | 19 - 20     | 22 - 31    | mid-May - July    | 4 - 6              | 2                     |
-+-----------------+-------------------------+------------------+-------------+------------+-------------------+--------------------+-----------------------+
 |                 | Schilfrohr-sänger       | 11               | 11 - 12     | 8 - 17     | late-April - July | 4 - 6              | 2                     |
-+-----------------+-------------------------+------------------+-------------+------------+-------------------+--------------------+-----------------------+
 | Sylviidae       | Gartengras-mücke        | 14               | 14          | 16 - 22    | April - July      | 4 - 5              | 2                     |
-+-----------------+-------------------------+------------------+-------------+------------+-------------------+--------------------+-----------------------+
 | Phylloscopi-dae | Fitis                   | 10               | 11 - 13     | 6 - 15     | April - July      | 4 - 8              | 2                     |
-+-----------------+-------------------------+------------------+-------------+------------+-------------------+--------------------+-----------------------+
 
-# Explorative data analysis
+# Exploratory data analysis
 
 ## Abundance over the years
 
-Stacked barplot showing cumulative abundance of the 13 selected bird taxa for each each year, while showing individual species contribution represented by different colors.
+Stacked bar plot showing cumulative abundance of the 13 selected bird taxa for each each year, while showing individual species contribution represented by different colors.
 
 -   Y-axis: number of sampled individuals
 
@@ -85,11 +72,10 @@ Box plot (1st row) and bar plot with mean and standard deviation of sampled indi
 
 -   Pronounced standard deviation in Feldsperling attributable to few (2) outliers
 
-+-----------------------------------------------------------+
-| ![](images/ggplot_sp_box.png)                             |
-+-----------------------------------------------------------+
-| ![](images/ggplot_sp_sd.png)                              |
-+-----------------------------------------------------------+
+|                                  |
+|----------------------------------|
+| ![](images/ggplot_sp_box-01.png) |
+| ![](images/ggplot_sp_sd.png)     |
 
 Bar plot for each taxa showing number of individuals for each year, while showing male/female composition
 
@@ -107,9 +93,9 @@ Bar plot for each taxa showing number of individuals for each year, while showin
 
 -   Feldsperling has main abundance in the first 9 years of the sampling period (2000 to 2009)
 
--   Large occurrence of unknown sex in Fitis, Rohrschwirl, Feldsperling, Gartengrasmücke and Blaumeise -\> needs to be considered for parameter estimation with sex as co-variate
+-   Large occurrence of unknown sex in Fitis, Rohrschwirl, Feldsperling, Gartengrasmücke and Blaumeise -\> needs to be considered for parameter estimation with sex as covariate
 
-![](images/ggplot_sp_sex_yr.png)
+![](images/ggplot_sp_sex_yr_I.png)
 
 # Statistical analysis
 
@@ -145,24 +131,25 @@ Estimates of survival (Phi) and detection (p) probability for each taxa from the
 
 ## Varying survival and detection probability
 
-estimates for phi and p varying over time and varying on various co-variates:
+Estimates for Phi and p varying over time and varying on various covariates:
 
--   Time interval
+-   Time interval: assuming even sampling effort
 
--   Sex (male, female, unknown)
+-   Sex: male, female, unknown
 
--   "Observer" -\> different samplers over entire sampling period might contribute to different detection probabilities due to different effort
+-   Observer: different samplers over entire sampling period might contribute to different detection probabilities due to different effort
 
--   Temperature
+-   Temperature: DWD Climate Data Center (CDC): Monthly mean of station observations of air temperature at 2 m above ground in °C for Germany, version v21.3, last accessed: 8.04.2024.
 
 ### **Fitis / Willow Warbler** (*Phylloscopus trochilus)*
 
 #### AIC values of six best models
 
-Sex (= "Geschlecht") seems best to model parameter estimates, as the first five models with the lowest AIC have one or both parameters, but mainly survival probability, estimated based on sex. Estimation for detection probability varies between no co-variate, sex, observer and even time. All five models are better than the basic model with constant probability for "Phi" and "p".
+Sex (= "Geschlecht") seems best to model parameter estimates, as the first five models with the lowest AIC have one or both parameters, but mainly survival probability, estimated based on sex. Estimation for detection probability varies between no covariate, sex, observer and even time. All five models are better than the basic model with constant probability for Phi and p.
 
 ```{r}
-head(AIC_Fitis[order(AIC_Fitis$AIC),2:6])
+AIC_Fitis <- read.csv("AIC/AIC_Fitis.csv")
+AIC_Fitis[order(AIC_Fitis$AIC),2:6]
 ```
 
 #### Parameter estimates for best model: Phi.sex_p.dot
@@ -179,9 +166,9 @@ head(AIC_Fitis[order(AIC_Fitis$AIC),2:6])
 
 =\> caution with survival estimates, due to large amount of unknown sex in the data set
 
-+------------------------------------+----------------------------------+
-| ![](images/fitis.png){width="362"} | ![](images/ggplot_sex_cs_06.png) |
-+------------------------------------+----------------------------------+
+|                       |                                  |
+|-----------------------|----------------------------------|
+| ![](images/fitis.png) | ![](images/ggplot_sex_cs_06.png) |
 
 ### **Gartengrasmücke / Garden Warbler** (Sylvia borin)
 
@@ -189,11 +176,12 @@ head(AIC_Fitis[order(AIC_Fitis$AIC),2:6])
 
 -   First eight models with lowest AIC and better than basic model
 
--   For phi temperature or no co-variate best, otherwise sex or time interval
+-   For phi temperature or no covariate best, otherwise sex or time interval
 
--   For p no co-variate or temperature best, otherwise also time interval
+-   For p no covariate or temperature best, otherwise also time interval
 
 ```{r}
+AIC_Gartengrasmücke <- read.csv("AIC/AIC_Gartengrasmücke.csv")
 AIC_Gartengrasmücke[order(AIC_Gartengrasmücke$AIC),2:6]
 ```
 
@@ -209,13 +197,11 @@ AIC_Gartengrasmücke[order(AIC_Gartengrasmücke$AIC),2:6]
 
 =\> Caution with survival estimates, due to cut off of capture data, as temperature starts only in 2004
 
-+----------------------------------------------------------------------+
-| ![](images/gartengrasmücke.png)                                      |
-+----------------------------------------------------------------------+
-| ![](images/ggplot_sp_capt_tmp_12.png)                                |
-+----------------------------------------------------------------------+
-| ![](images/ggplot_tmp_ggm-04.png)                                    |
-+----------------------------------------------------------------------+
+|                                          |
+|------------------------------------------|
+| ![](images/gartengrasmücke.png)          |
+| ![](images/ggplot_sp_capt_tmp_12-01.png) |
+| ![](images/ggplot_tmp_ggm.png)           |
 
 ### **Schilfrohrsänger / Sedge Warbler** (*Acrocephalus schoenobaenus*)
 
@@ -223,11 +209,12 @@ AIC_Gartengrasmücke[order(AIC_Gartengrasmücke$AIC),2:6]
 
 -   Almost all models better than basic model
 
--   For phi no co-variate or temperature best, otherwise sex or time interval
+-   For phi no covariate or temperature best, otherwise sex or time interval
 
--   For p temperature or no co-variate best, otherwise also sex or time interval
+-   For p temperature or no covariate best, otherwise also sex or time interval
 
 ```{r}
+AIC_Schilfrohrsänger <- read.csv("AIC/AIC_Schilfrohrsänger.csv")
 AIC_Schilfrohrsänger[order(AIC_Schilfrohrsänger$AIC),2:6]
 ```
 
@@ -243,11 +230,10 @@ AIC_Schilfrohrsänger[order(AIC_Schilfrohrsänger$AIC),2:6]
 
 =\> Caution with detection estimates, due to cut off of capture data, as temperature starts only in 2004
 
-+---------------------------------------------------------------------+
-| ![](images/schilfrohrsänger.png)                                    |
-+---------------------------------------------------------------------+
-| ![](images/ggplot_sp_capt_tmp_04.png)                               |
-+---------------------------------------------------------------------+
+|                                       |
+|---------------------------------------|
+| ![](images/schilfrohrsänger.png)      |
+| ![](images/ggplot_sp_capt_tmp_04.png) |
 
 ### **Drosselrohrsänger / Great Reed-warbler** (*Acrocephalus arundinaceus*)
 
@@ -255,11 +241,12 @@ AIC_Schilfrohrsänger[order(AIC_Schilfrohrsänger$AIC),2:6]
 
 -   Almost all models better than basic model
 
--   For phi temperature or no co-variate best, otherwise also sex
+-   For phi temperature or no covariate best, otherwise also sex
 
--   For p no co-variate or temperature best, otherwise time interval or observer (="Initials")
+-   For p no covariate or temperature best, otherwise time interval or observer (="Initials")
 
 ```{r}
+AIC_Drosselrohrsänger <- read.csv("AIC/AIC_Drosselrohrsänger.csv")
 AIC_Drosselrohrsänger[order(AIC_Drosselrohrsänger$AIC),2:6]
 ```
 
@@ -273,11 +260,10 @@ AIC_Drosselrohrsänger[order(AIC_Drosselrohrsänger$AIC),2:6]
 
 =\> Caution with survival estimates: neglect of capture data before 2004 and wide confidence interval around estimates
 
-+---------------------------------------------------------------------+
-| ![](images/drosselrohrsänger.png)                                   |
-+---------------------------------------------------------------------+
-| ![](images/ggplot_sp_capt_tmp_08.png)                               |
-+---------------------------------------------------------------------+
+|                                       |
+|---------------------------------------|
+| ![](images/drosselrohrsänger.png)     |
+| ![](images/ggplot_sp_capt_tmp_08.png) |
 
 ### **Teichrohrsänger / Common Reed-warbler** (*Acrocephalus* scirpaceus)
 
@@ -285,11 +271,12 @@ AIC_Drosselrohrsänger[order(AIC_Drosselrohrsänger$AIC),2:6]
 
 -   All models better than basic model
 
--   For phi no co-variate or sex combined with temperature best, otherwise also temperature alone or time interval
+-   For phi no covariate or sex combined with temperature best, otherwise also temperature alone or time interval
 
--   For p temperature or no co-variate best, otherwise sex or time interval
+-   For p temperature or no covariate best, otherwise sex or time interval
 
 ```{r}
+AIC_Teichrohrsänger <- read.csv("AIC/AIC_Teichrohrsänger.csv")
 AIC_Teichrohrsänger[order(AIC_Teichrohrsänger$AIC),2:6]
 ```
 
@@ -314,11 +301,12 @@ AIC_Teichrohrsänger[order(AIC_Teichrohrsänger$AIC),2:6]
 
 -   Almost all models better than basic model
 
--   For phi no co-variate or temperature best, otherwise sex or time interval
+-   For phi no covariate or temperature best, otherwise sex or time interval
 
--   For p temperature or no co-variate best, otherwise time interval or sex
+-   For p temperature or no covariate best, otherwise time interval or sex
 
 ```{r}
+AIC_Rohrschwirl <- read.csv("AIC/AIC_Rohrschwirl.csv")
 AIC_Rohrschwirl[order(AIC_Rohrschwirl$AIC),2:6]
 ```
 
@@ -343,11 +331,12 @@ AIC_Rohrschwirl[order(AIC_Rohrschwirl$AIC),2:6]
 
 -   Almost all models better than basic model
 
--   For phi no co-variate or temperature best, otherwise sex combined with temperature or time interval
+-   For phi no covariate or temperature best, otherwise sex combined with temperature or time interval
 
--   For p temperature or no co-variate best, otherwise initials
+-   For p temperature or no covariate best, otherwise initials
 
 ```{r}
+AIC_Bartmeise <- read.csv("AIC/AIC_Bartmeise.csv")
 AIC_Bartmeise[order(AIC_Bartmeise$AIC),2:6]
 ```
 
@@ -374,9 +363,10 @@ AIC_Bartmeise[order(AIC_Bartmeise$AIC),2:6]
 
 -   For phi time interval best variable, otherwise sex
 
--   For p sex or no co-variate best, otherwise observer (= "initials")
+-   For p sex or no covariate best, otherwise observer (= "initials")
 
 ```{r}
+AIC_Blaumeise <- read.csv("AIC/AIC_Blaumeise.csv")
 AIC_Blaumeise[order(AIC_Blaumeise$AIC),2:6]
 ```
 
@@ -396,11 +386,10 @@ AIC_Blaumeise[order(AIC_Blaumeise$AIC),2:6]
 
 -   Large confidence interval around survival estimates -\> statistical significance questionable
 
-+-------------------------------------+---------------------------------------+
-| ![](images/blaumeise.png)           | ![](images/ggplot_capt_yr_blm-01.png) |
-+-------------------------------------+---------------------------------------+
-| ![](images/ggplot_sp_sex_yr_11.png) | ![](images/ggplot_sex_cs_11.png)      |
-+-------------------------------------+---------------------------------------+
+|                                     |                                    |
+|-------------------------------------|------------------------------------|
+| ![](images/blaumeise.png)           | ![](images/ggplot_capt_yr_blm.png) |
+| ![](images/ggplot_sp_sex_yr_11.png) | ![](images/ggplot_sex_cs_11.png)   |
 
 ### **Weißsterniges Blaukehlchen / Bluethroat** (*Luscinia svecica)*
 
@@ -408,12 +397,13 @@ AIC_Blaumeise[order(AIC_Blaumeise$AIC),2:6]
 
 -   First four models with lowest AIC and better than basic model
 
--   For phi no co-variate or sex, otherwise time interval also possible
+-   For phi no covariate or sex, otherwise time interval also possible
 
--   For p mainly observer otherwise sex as co-variate
+-   For p mainly observer otherwise sex as covariate
 
 ```{r}
-head(AIC_Weißstern[order(AIC_Weißstern$AIC),2:6])
+AIC_Weißstern <- read.csv("AIC/AIC_Weißstern.csv")
+AIC_Weißstern[order(AIC_Weißstern$AIC),2:6]
 ```
 
 #### Parameter estimates for best model: Phi.dot_p.initials
@@ -428,11 +418,10 @@ head(AIC_Weißstern[order(AIC_Weißstern$AIC),2:6])
 
 -   Confidence interval for estimates of other observers too large -\> possibly due to small data and individuals only captured once
 
-+----------------------------------------------------------------------+
-| ![](images/weißstern.png)                                            |
-+----------------------------------------------------------------------+
-| ![](images/ggplot_ppl_wbk-02.png)                                    |
-+----------------------------------------------------------------------+
+|                                |
+|--------------------------------|
+| ![](images/weißstern.png)      |
+| ![](images/ggplot_ppl_wbk.png) |
 
 ### **Amsel / Eurasian Blackbird** (*Turdus merula)*
 
@@ -440,11 +429,12 @@ head(AIC_Weißstern[order(AIC_Weißstern$AIC),2:6])
 
 -   10 models better than basic model
 
--   For phi sex or no co-variate best, otherwise time interval possible
+-   For phi sex or no covariate best, otherwise time interval possible
 
 -   For p time interval best explanatory variable
 
 ```{r}
+AIC_Amsel <- read.csv("AIC/AIC_Amsel.csv")
 AIC_Amsel[order(AIC_Amsel$AIC),2:6]
 ```
 
@@ -462,11 +452,10 @@ AIC_Amsel[order(AIC_Amsel$AIC),2:6]
 
 -   Large confidence interval around estimates -\> statistical significance questionable
 
-+---------------------------------------+----------------------------------+
-| ![](images/amsel.png)                 | ![](images/ggplot_sex_cs_09.png) |
-+---------------------------------------+----------------------------------+
-| ![](images/ggplot_capt_yr_ams-01.png) |                                  |
-+---------------------------------------+----------------------------------+
+|                                    |                                  |
+|------------------------------------|----------------------------------|
+| ![](images/amsel.png)              | ![](images/ggplot_sex_cs_09.png) |
+| ![](images/ggplot_capt_yr_ams.png) |                                  |
 
 ### **Feldsperling / Eurasian Tree Sparrow** (*Passer montanus)*
 
@@ -474,11 +463,12 @@ AIC_Amsel[order(AIC_Amsel$AIC),2:6]
 
 -   Almost all models better than basic model
 
--   For phi temperature or no co-variate best, otherwise sex
+-   For phi temperature or no covariate best, otherwise sex
 
--   For p no co-variate or temperature best, otherwise time interval or observer
+-   For p no covariate or temperature best, otherwise time interval or observer
 
 ```{r}
+AIC_Feldsperling <- read.csv("AIC/AIC_Feldsperling.csv")
 AIC_Feldsperling[order(AIC_Feldsperling$AIC),2:6]
 ```
 
@@ -496,11 +486,10 @@ AIC_Feldsperling[order(AIC_Feldsperling$AIC),2:6]
 
 =\> Caution with survival estimates: neglect of capture data before 2004 and wide confidence interval around estimates
 
-+--------------------------------------------------------------------+
-| ![](images/feldsperling.png)                                       |
-+--------------------------------------------------------------------+
-| ![](images/ggplot_sp_capt_tmp_01.png)                              |
-+--------------------------------------------------------------------+
+|                                       |
+|---------------------------------------|
+| ![](images/feldsperling.png)          |
+| ![](images/ggplot_sp_capt_tmp_01.png) |
 
 ### **Goldammer / Yellowhammer** (*Emberiza citrinella)*
 
@@ -508,11 +497,12 @@ AIC_Feldsperling[order(AIC_Feldsperling$AIC),2:6]
 
 -   Almost all models better than basic model
 
--   For phi sex or no co-variate best, otherwise time interval
+-   For phi sex or no covariate best, otherwise time interval
 
 -   For p time interval best, otherwise observer
 
 ```{r}
+AIC_Goldammer <- read.csv("AIC/AIC_Goldammer.csv")
 AIC_Goldammer[order(AIC_Goldammer$AIC),2:6]
 ```
 
@@ -534,11 +524,10 @@ AIC_Goldammer[order(AIC_Goldammer$AIC),2:6]
 
     -   Between 2011 and 2017 individuals captured up to three times
 
-+--------------------------------------+----------------------------------+
+|                                      |                                  |
+|--------------------------------------|----------------------------------|
 | ![](images/goldammer.png)            | ![](images/ggplot_sex_cs_10.png) |
-+--------------------------------------+----------------------------------+
 | ![](images/ggplot_sp_capt_yr_10.png) |                                  |
-+--------------------------------------+----------------------------------+
 
 ### **Rohrammer / Reed Bunting** (*Emberiza schoeniclus)*
 
@@ -546,11 +535,12 @@ AIC_Goldammer[order(AIC_Goldammer$AIC),2:6]
 
 -   Almost all models better than basic model
 
--   For phi no co-variate or temperature best, otherwise sex or time interval
+-   For phi no covariate or temperature best, otherwise sex or time interval
 
--   For p temperature or no co-variate best, otherwise observer
+-   For p temperature or no covariate best, otherwise observer
 
 ```{r}
+AIC_Rohrammer <- read.csv("AIC/AIC_Rohrammer.csv")
 AIC_Rohrammer[order(AIC_Rohrammer$AIC),2:6]
 ```
 
@@ -564,11 +554,10 @@ AIC_Rohrammer[order(AIC_Rohrammer$AIC),2:6]
 
 =\> Caution with detection estimates: neglect of capture data before 2004 and wide confidence interval around estimates
 
-+----------------------------------------------------------------------+
-| ![](images/rohrammer.png)                                            |
-+----------------------------------------------------------------------+
-| ![](images/ggplot_sp_capt_tmp_03.png)                                |
-+----------------------------------------------------------------------+
+|                                       |
+|---------------------------------------|
+| ![](images/rohrammer.png)             |
+| ![](images/ggplot_sp_capt_tmp_03.png) |
 
 # Summary
 
@@ -580,9 +569,6 @@ AIC_Rohrammer[order(AIC_Rohrammer$AIC),2:6]
 
     -   Feldsperling: decline over entire sampling period
 
-```{=html}
-<!-- -->
-```
 -   Basic model
 
     -   Survival probability higher than detection probability for most bird taxa, which mostly larger and heavier
@@ -591,7 +577,7 @@ AIC_Rohrammer[order(AIC_Rohrammer$AIC),2:6]
 
         -   Fitis, Rohrschwirl, Bartmeise, Blaumeise, Feldsperling
 
--   Main co-variates for differences in survival and detection probability:
+-   Main covariates for differences in survival and detection probability:
 
     -   Sex:
 
@@ -617,4 +603,4 @@ AIC_Rohrammer[order(AIC_Rohrammer$AIC),2:6]
 
         -   most complex model which mostly leads to over fitting and thus little explanatory value especially for Schilfrohrsänger, Teichrohrsänger, Rohrschwirl, Bartmeise, Feldsperling
 
--   Other co-variates necessary to explain abundance trends: humidity, weight, life span?
+-   Other covariates necessary to explain abundance trends: humidity, weight, life span?
