@@ -1,0 +1,489 @@
+---
+title: "Birds of Rietzer See"
+author: "Moritz Wenzler-Meya + SKS"
+date: "`r Sys.setlocale('LC_TIME','C'); paste('Last Update', format(Sys.time(), '%B %e, %Y')) `"
+output:
+  rmdformats::readthedown:
+    highlight: kate
+    code_folding: show
+    toc_depth: 4
+    toc_float: true
+editor_options:
+  chunk_output_type: console
+params:
+  date: !r Sys.Date()
+---
+
+<style>
+h1 {
+  color: Orange ;
+}
+h2, h3, h4, h5, h6, legend {
+  color: Indigo ;
+}
+p {
+  line-height:170%;
+}
+sidebar h2 {
+  background-color: Indigo;
+}
+code {
+  color: Indigo ;
+}
+.exercise {
+  color: #824b00;
+}
+</style>
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE, message = FALSE, warning = FALSE, 
+                      dev = "ragg_png", fig.width = 9, fig.height = 6, dpi = 600, retina = 1)
+Sys.setlocale("LC_TIME", "C")
+```
+
+# important information about the dataset
+This data set contains the ringing information of birds; data owner: LfU Brandenburg, Tobias Dürr.
+
+Auswertung Datenbank Beringungsdaten Rietzer See 
+
+•	Beringungen seit 1963 aber Auswahlzeitraum exemplarisch für 2000-2022
+
+•	Der Datensatz wird beeinflusst durch jährlich durchgeführte Beringungsaktionen, in der sich wegen des dann gezielten Fangs durch parallel mehrere tätige Beringer ungleich mehr Vögel gefangen haben als im übrigen Zeitraum des Jahres. Solche Fangaktivitäten fallen in die 3. Aprildekade, die 2. Julidekade (können abweichend aber zwischen 30. Juni und 31. Juli) liegen, sowie die 3. Septemberdekade (mit wenigen Abweichungen in die 2. Septemberdekade). Dies ist bei der Bewertung der Bewertung des Fangmusters zu berücksichtigen. 
+
+•	Die Datenbank enthält Beringungsdaten, Wiederfänge dazugehöriger Vögel, Kontrollfänge abseits des Rietzer Sees beringter Vögel
+
+•	Sie umfasst alle seit 200 am Rietezr See beringte Arten.
+
+o	Bei Auswertungen sind alle Altersklassen zu betrachten, jedoch sollten Nestlinge und nicht flügge Junge speziell betrachtet werden, da sie nicht durch Fang sondern durch Nestsuche beringt wurden, was in den letzten 20 Jahren deutlich abgenommen hat;
+
+o	Fänglinge sind alle Diesjährigen (eben flügge = EFL., diesjährige = 1.JJ, 1.JT, 1.J.), Adulten = AD.0, N1.J, 2.J., 3.J., …) sowie Fänglinge unbestimmten Alters = FGL.)
+
+•	ganzjährig erhobene Daten aus Brutzeit, Migrationszeiten und Überwinterung
+
+•	Erstfang = erstmaliger Fang eines unberingten Vogels (sein Beringungsdatum) oder bei bereits in einem früheren Jahr beringten Vögeln der 1. Wiederfang im betrachteten Jahr. Auch der erstmalige Kontrollfang eines abseits des Rietzer Sees beringten Vogels innerhalb eines Jahres am Rietzer See wäre hier zu addieren. 
+
+
+Auswertungsmöglichkeiten:
+
+•	Beschreibung der Artenzusammensetzung, mglw. konzentriert für die am häufigsten beringten Arten
+
+o	Herausarbeiten, ob es im Betrachtungszeitraum Verschiebungen in der Artenzusammensetzung (Anteil gefangener Arten) gegeben hat
+
+•	Abbildung und Beschreibung der Phänologie der Erstfänge, soweit möglich getrennt (und aufaddiert) nach Altersklassen, zusammengefasst nach Pentaden oder Dekaden
+
+o	Herausarbeiten, ob zeitliche Verschiebung erkennbar
+
+o	Ermittlung des Jungvogelanteils pro Jahr und Art 
+
+•	Ermittlung der Altersstruktur des Brutbestandes pro Art, Jahr und für 5-Jahres-Abschnitte
+
+•	Ermittlung der Überlebensrate durch Ermittlung des Anteils langfristiger Ortsfunde (Wiederfänge in Vorjahren beringter Vögel) unter den Brut- oder Altvögeln
+
+•	Ermittlung der durchschnittlichen Verweildauer als Mittelwert aller kurzfristigen Wiederfänge im Gebiet pro Zeiteinheit (Pentade oder Dekade)
+
+
+Hinweise für spezielle Auswertungen:
+
+•	Fangmuster:
+
+o	bildet die Phänologie des Auftretens einer Art am Rietzer See auf und kennzeichnet Ankunft, Heimzug, Brutzeit, Umherstreifen der Jungen von Erst-, Zweit- und späteren Bruten, Dispersionsverhalten (Vorzugzeit), Weg- und Durchzug sowie Überwinterung. 
+
+o	abgebildet werden Erstfänge als Pentaden- oder Dekadensumme für alle Jahre zusammengefasst oder für Zeitscheiben von bspw. 5, 10, 15 und 20 Jahren in Prozent (100 % ist die Summe aller Erstfänge in allen Jahren, die als n anzugeben ist. Die als Säulendiagramm auszuweisenden Daten sollten beschriftet werden. 
+
+
+•	Körpergewicht:
+
+o	Abgebildet werden die innerhalb einer Pentade oder Dekade errechneten Mittelwerte in Gramm, am besten durch Linien miteinander zu verbinden. 
+
+o	Zwischen tageszeitlich variierenden Gewichten ist in der zusammenfassenden Auswertung nicht zu differenzieren, d.h. es werden alle Daten zusammengefasst. Dennoch kann eine separate Darstellung des Gewichtsverlaufs in Abhängigkeit von der Uhrzeit des Fangs sehr sinnvolle zusätzliche Auswertungen ergeben. 
+
+o	Eine getrennte Darstellung von Werten adulter und diesjähriger Vögel, soweit hinreichend erfasst auch der Geschlechter, kann sinnvoll sein. 
+
+
+•	Flügellänge:
+
+o	Flügellänge als Maß in Millimeter, abzubilden wie beim Körpergewicht
+
+o	wobei über eine Trennung zwischen Werten adulter und diesjähriger Vögel, soweit hinreichend erfasst auch zwischen Geschlechtern erfolgen kann
+
+
+•	Depotfettklasse:
+
+o	Depotfett wird klassifiziert in 9 Depotfettklassen von 0 (ohne Fett) bis 8 (Unterbauch einschließlich Brustmuskel mit Fett überlagert). Es wird von Zugvögeln angelegt, um ziehen zu können (2x im Jahr), kann aber auch für die Überwinterung angelegt werden. Nicht jeder Vogel wurde im Datensatz klassifiziert aber es gibt erst wenige Auswertungen, die sich damit befasst haben. 
+
+o	Eine getrennte Darstellung von Werten adulter und diesjähriger Vögel, soweit hinreichend erfasst auch der Geschlechter kann sinnvoll werden
+
+o	Darstellung wie beim Körpergewicht
+
+
+	Um die individuelle Fitness eines Vogels noch näher zu bestimmen, ließe sich sein Gewicht mit seiner Fettklasse kombiniert betrachten, am leichtesten abzubilden für mehrfach gefangene Individuen aber auch als Durchschnittswert aller Jung- oder aller Altvögel im jeweiligen Zeitfenster (Pentade oder Dekade). Das Ergebnis empfiehlt sich mit der mittleren Aufenthaltsdauer zusammen zu betrachten, die den durchschnittlichen Rastaufenthalt eines Zugvogels bis zu seinem letzten Wiederfang vor dem Abzug innerhalb einer Saison abbildet. Nahrungsdefizite, bspw. das Fehlen von Blattläusen in sehr heißen oder sehr kühlen Sommern könnten mglw. längere Rastaufenthalte erfordern als optimale Nahrungsbedingungen oder gar zu Abzug in ungünstiger Körperkondition führen.  Hier wäre bspw. ein Vergleich für die Zeitfenster 2000-2011 und 2012-2022 sinnvoll für ausgewählte, häufiger gefangene Arten (z.B. Rohrsänger, Bartmeise, Rohrammer). 
+
+
+•	Prospektive Wiederfänge:
+
+o	Abgebildet werden diejenigen Prozentsätze von Erstfängen (EF) für einzelne Pentaden (oder Dekaden), die später in derselben Saison Wiederfänge (WF) am Rietzer See ergaben. 
+
+•	Minimale Verweildauer (VD) in Tagen (d) der tatsächlich erzielten Wiederfänge.
+
+o	Abgebildet werden Medianwerte. Wiederfänge, die am selben Tag erzielt wurden wie die Erstfänge, blieben hierbei unberücksichtigt. 
+
+•	Durchschnittlicher Prozentsatz der in den einzelnen Pentaden (oder Dekaden) erzielten Wiederfänge innerhalb derselben Saison, 
+
+o	Der Wert (%) wird bezogen auf die Gesamtzahl (Erstfänge und Wiederfänge) aller Fänglinge. 
+
+o	Für Nestlinge und eben flügge beringte Vögel könnte hier eine separate Betrachtung erfolgen, da sie deutlich machen würde, bis wann sich Jungvögel, die sicher aus dem Gebiet stammen, hier aufhalten (bis zum Abzug).  
+
+	Weiterführende Auswertungen könnten sich mit der Mauserklasse befassen, die im Gesamtdatensatz aber unvollständig und tlw. uneinheitlich erhoben wurde. Für einige Arten können trotzdem umfangreiche Datenreihen vorliegen die es lohnen, diese zu analysieren. Differenziert wird zwischen Kleingefiedermauser (KM, 4 Klassen) und Großgefiedermauser (GM, hier mit Fokus auf der Handschwingenmauser mit Mauserwert zwischen 0 und 50),
+
+o	Kleingefiedermauser wird nach Körperdritteln differenziert: 0 = ohne Mauser, 1 = bis 1/3 der Kleingefiederpartien in Mauser, 2 = bis 2/3 der Kleingefiederpartien mit Mauser, 3 = mehr als 2/3 der Kleingefiederpartien mausernd
+
+o	Bei der Großgefiedermauser werden alle 10 Handschwingen (HS) separat betrachtet. Ist eine Feder alt, erhält sie den Wert Null, 1 steht für ausgefallen oder als Kiel sprießend, 2 für bis 1/3 aus dem Kiel gewachsen, 3 für bis 2/3 aus dem Kiel, 4 für fast fertig und 5 für vollständig vermausert. Maximaler Mauserwert für die Handschwingen wäre dann HM 50 (10 HS x 5 Punkte je Feder). Gezählt wird normalerweise von der innersten zur äußersten HS, weil bei den meisten Arten auch der Mauserverlauf von innen nach außen verläuft. Manchmal wurde nur angegeben, welche der Schwingen noch wächst, was ggf. eine Umrechnung in den Mauserwert erfordern würde oder unberücksichtigt bleiben muss. 
+
+o	Um den Mauserverlauf zu beschreiben ist eine Zeitskala (Pentade oder Dekade) festzulegen. Zunächst ließe sich ermitteln, wieviel Prozent der Vögel mit Mauser in der jeweiligen Pentade oder Dekade ist. Jungvögel mit Angabe 1.JJ tragen bspw. volles Jugendkleid und haben mit der Mauser ins 1. Jahreskleid noch nicht begonnen. 1.JT steht grundsätzlich für mausernd, 1.J. für das erreichte vollständige erste Jahreskleid (nach der Jugendmauser).  Ob diese Anwendung von allen Beringern konsequent angewendet wurde ist jedoch zu bezweifeln, daher im Bemerkungsfeld prüfen, ob Angaben zur Mauser bei Altersangabe 1.JJ oder 1.J. (sowie bei Altvögeln und Fänglingen unbestimmten Alters) gemacht wurden. 
+
+
+Hinweise zu speziellen Arten:
+
+Es gibt zu fast jeder am Rietzer See beringten Vogelart spannende Fragestellungen zu untersuchen, deren Beantwortung noch offen ist. Exemplarisch seien hier einige Arten genannt, die bei Bedarf auch auf andere Arten ausgeweitet werden könnten. 
+
+•	Schilfrohrsänger
+
+o	Zugvogel, der am Rietzer See brütet. Mglw. bis zu 50 % der Weibchen machen 2 Bruten. Die Jungen der Erstbrut (EB) werden in der 2. Junidekade flügge, die der 2. Brut (ZB) Ende Juli/Anfang August. Junge aus Nachgelegen werden zwischen beiden Zeitpunkten flügge. Etwa um den 15. Juli setzt Abzug nicht mehr brütender Altvögel sowie von Jungen der EB ein aber auch Zuzug gebietsfremder Vögel erfolgt. In den Erstfangdaten könnten daher deutoiche aber auch durch Überlagerungen undeutliche Gipfel die Interpretation der Ergebnisse erschweren.
+
+o	 Die Art hat in den letzten Jahren rasant am Rietzer See zugenommen. Interessant wäre, ob dies an einer steigenden Nachwuchsrate liegt oder an einer höheren Überlebensrate (Rückkehrrate aus dem Winterquartier). Lässt sich ein Zeitpunkt ableiten, wann bspw. schlechte Jungvogelanteile gegenüber den gefangenen Altvögeln gestiegen sind? Werte sollten mindestens zwischen 60-80 % liegen. 
+
+
+•	Blaukehlchen
+
+o	Die Art war vom Aussterben bedroht und zählt heute zu den Charakterarten am Rietzer See (2023 >10 Reviere). Vermutet wird eine Zugwegverkürzung, die zu einem Anstieg der Überlebensrate geführt haben kann. So weisen jüngte Ringfunde auf Überwinterung in Reisfeldern Ostspaniens hin (statt im Delta des Senegal in Westafrika). Hier könnte sich im Laufe der Jahre die Alterstruktur des Brutbestandes verändert haben, ablesbar am Anteil beringter Vögel in der Brutpopulation. Extrem trockene Jahre im spanischen Winterquartier könnte hingegen die Art auch gefährden, da unklar ist, ob sie dann zieht oder verhungert. Auch ein Anstieg der Nachwuchsrate wäre denkbar (die Art macht 2 Bruten). 
+
+
+•	Amsel
+
+o	Die Art kommt ganzjährig am Rietzer See vor aber es ist bekannt, dass „Waldamseln“ andere Zugbereitschaft aufweisen als „Stadtamseln“, wobei es auch geschlechtsspezifische Unterschiede gibt (Weibchen sollen höhere Zugbereitschaft haben als Männchen, Jungvögel sollen häufiger ziehen als Altvögel). Es wäre zu prüfen, ob Vögel aus dem Brutbestand auch im Winter wiedergefangen wurden bzw. im Winter beringte zur Brutzeit kontrolliert wurden oder wenn es keine deutliche Trennung gibt, wie viel % der Männchen bzw. Weibchen jeweils in der Brutzeit und im Winter bzw. umgekehrt wiedergefangen werden konnte. Abzubilden wäre neben der Phänologie der Erstfänge auch die Chronologie der Wiederfänge, d.h. ab wann werden im Herbst erstmals Vögel gefangen, die am Rietzer See überwintern und ab wann im Frühjahr werden die späteren Brutvögel gefangen, erfolgt also die Revierbesetzung. 
+
+
+•	Rohrammer
+
+o	Die v.a. in Spanien überwinternde Art hat am Rietzer See stark abgenommen, ohne dass die Ursachen erkennbar sind. Lassen sich aus dem Datensatz Veränderungen in der Altersstruktur des Brutbestandes oder im Jungvogelanteil ableiten, die dies erklären könnten oder einen Zeitpunkt andeuten, wann der Rückgang eingesetzt hat? 
+
+
+•	Teichrohrsänger
+
+o	Die Art eignet sich wegen der Fülle an Daten und hohen Wiederfangrate gut zur Analyse von Fitnesswerten (Rastaufenhalt, Körpergewicht, Depotfettklasse). Auffallend sind immer wieder sehr magere Vögel, die offenbar nicht genug Futter finden. Dies herauszuarbeiten, wo liegt das optimale Gewicht in einer Pentade / Dekade für Jung- und Altvögel, in welchen Jahren (oder Jahresabschnitten) gab es Abweichungen davon nach oben oder unten, wie lange rastet ein Jungvogel durchschnittlich bzw. haben die Rastaufenthalte sowohl hinsichtlich des Anteils wiedergefangener Vögel als auch hinsichtlich der durchschnittlichen Aufenthaltsdauer zugenommen und gibt es seitens der Fitness der Vögel hierfür Erklärungen? Diesen Fragestellungen könnte auch für den Schilfrohrsänger, die Rohrammer und den Rohrschwirl nachgegangen werden. 
+
+•	Literaturhinweise:
+
+•	Bairlein, F., J. Dierschke, V. Dierschke, V. Salewski, O. Geiter, K. Hüppop, U. Köppen & W. Fiedler (2014): Atlas des Vogelzugs. Ringfunde deutscher Brut- und Gastvögel. Aula-Verlag Wiebelsheim (ISBN 978-3-89104-770-5)
+
+•	Berthold, P., G. Fliege, G. Heine, U. Querner & R. Schlenker (1991): Wegzug, Rastverhalten, Biometrie und Mauser von Kleinvögeln in Mitteleuropa. Die Vogelwarte, Sonderheft, Band 36 (ISSN 0049-6650)
+
+•	Fowler, J. & L. Cohlen: Statistics for Ornithologists, BTO Guide 22 (ISBN O 903793 555)
+
+Kontakt (bei Verständnis- und Fachfragen):
+Tobias Dürr, Staatliche Vogelschutzwarte im Landesamt für Umwelt Brandenburg, Tel, 033878-903813 (tobias.duerr@lfu.brandenburg.de)
+
+
+
+
+Important: <br>
+* Ring_Inschrift: ring identifier <br>
+* Artbezeichnung.deutsch: species name <br>
+* Beobachter: person ringing the birds, maybe important for sampling effort <br>
+
+# preparation
+
+## load packages
+
+First we load some packages to load and visualize the data
+
+```{r}
+package.list=c("here",
+               "marked",
+               "skimr",
+               "sf",
+               "tmap",
+               "devtools",
+               "rnaturalearthdata", 
+               "ggplot2",
+               "readr",
+               "tidyr",
+               "dplyr")
+
+for (package in package.list) {
+  if (!require(package, character.only=T, quietly=T)) {
+    install.packages(package)
+    library(package, character.only=T)
+  }
+}
+
+```
+
+## load Rietzer See bird data
+
+
+```{r}
+bird_data <- read.csv(here("output" ,"data-proc", "bird_data_rietzer_see_2000_2022_filled_min_4326.csv"), row.names = 1)
+```
+
+## overview of data
+
+First we show some summary data
+
+```{r}
+names(bird_data)
+head(bird_data)
+```
+
+# Description of columns
+
+"Ring_Inschrift" # unique ID         
+"Fundtyp"                
+"Artbezeichnung.deutsch"  # species name
+"Ortsbezeichnung" # capture location       
+"Datum" # original date and time of capture, check for sampling bias!                  
+"Beobachter" # person who ringed the birds, check for different efforts             
+"Altersdefinition" # adults only!       
+"Bemerkung"              
+"Geschlecht"  # sometimes sex is unknown            
+"date" # date of capture                   
+"year" # check for time varying annual temperatures                    
+"month"                  
+"day"                   
+"Gewicht_num_min" # may contain NA, use hist() to check if there inconsistencies!
+"Fluegellaenge_num_min"   # may contain NA, use hist() to check if there inconsistencies!
+"Teilfederlaenge_num_min" # may contain NA, use hist() to check if there inconsistencies!
+
+# Exploring the data set
+## overview plot 
+
+Species names:
+
+```{r}
+unique(bird_data$`Artbezeichnung deutsch`)
+```
+
+## individual ring numbers per year
+
+```{r}
+bird_data_plot <- bird_data |> 
+  group_by(`Artbezeichnung deutsch`, Ring_Inschrift , year) |> 
+  summarise(n = n()) 
+
+
+ggplot() +
+  geom_bar(data = bird_data_plot, aes(x = year, y = n,  fill = `Artbezeichnung deutsch`),
+           stat = "identity") +
+  scale_fill_manual(values = rainbow(142, s=.6, v=.9)[sample(1:142,142)]) +
+  geom_point(data = bird_data_plot |>
+               group_by(year) |> 
+               summarise(n_id = n()), 
+             aes(x = year,y = n_id), 
+             stat = "identity") +
+  geom_text(data = bird_data_plot |>
+               group_by(year) |> 
+               summarise(n_id = n()), 
+             aes(x = year, y = n_id, label = n_id), 
+             vjust = -0.5) +
+  scale_y_continuous("# of captures", sec.axis = sec_axis(~ . , name = "\U2022 =  # of individuals")) +
+  theme(legend.position = "none")
+  
+```
+
+## number of bird species per year
+
+```{r}
+bird_data_year <- 
+  bird_data |>
+  group_by(`Artbezeichnung deutsch`, year) |>
+  summarise(n = n()) |>
+  pivot_wider(names_from = `Artbezeichnung deutsch`, values_from = n) |>
+  data.frame()
+
+head(bird_data_year)
+
+bird_data_year<- rename(bird_data_year, `Weißsterniges Blaukehlchen` = Weißsterniges.Blaukehlchen)
+```
+
+## total number of individuals per species
+
+```{r}
+bird_sum <- colSums(bird_data_year[,-1], na.rm = TRUE)
+```
+
+## total number of individuals per species > 10
+
+```{r}
+bird_bigger_ten <- names(bird_sum[bird_sum>10])
+```
+
+## number of individuals per species per year [but more than 10i total] - plot
+
+```{r}
+bird_data_year_long <- 
+  bird_data |> filter(`Artbezeichnung deutsch` %in% bird_bigger_ten) |>
+  group_by(`Artbezeichnung deutsch`, year) |>
+  summarise(n = n()) |>
+  data.frame()
+
+bird_data_year_bigger_ten <- 
+  bird_data_year_long |> filter(Artbezeichnung.deutsch %in% bird_bigger_ten)|>
+  data.frame()
+
+ggplot() +
+  geom_bar(data = bird_data_year_long, aes(x = year, y = n,  fill = Artbezeichnung.deutsch),
+           stat = "identity") +
+scale_fill_manual(values = rainbow(142, s=.6, v=.9)[sample(1:142,142)]) +
+theme(legend.position = "bottom")
+```
+
+# Preparing for capture recapture
+
+## to do: select a bird species! 
+
+```{r}
+# to check which bird species are there
+# unique(bird_data$Artbezeichnung.deutsch)
+
+amsel <- "Amsel"  ## explore here !!!!!!
+# bird_spec_name <- "Rohrschwirl"
+```
+
+## calculate the years it has been captured
+
+```{r}
+data_plot <- bird_data  |> 
+         filter(`Artbezeichnung deutsch` %in% 'Amsel') |> 
+  group_by(Ring_Inschrift, year) |> 
+  mutate(n = n()) |> 
+  filter(row_number()==1) |>   # select only first observation per year 
+  ungroup()
+
+ggplot(data_plot, aes(year, Ring_Inschrift)) +
+  geom_tile(aes(fill = n)) +
+  scale_fill_gradient(low = "grey", high = "red") +
+  theme_minimal() +
+  theme(axis.text.x = element_text(angle=90))
+
+```
+
+## capture-recapture history for selected bird species
+
+```{r}
+cmr_hist <- table(data_plot$Ring_Inschrift,data_plot$year) # returns if there is at least one capture in the respective year (1)
+head(cmr_hist) #capture history of single birds
+
+
+# check if there are more than one observation per year (0 or 1)
+table(cmr_hist)
+
+## check if some bird individuals have been tagged more than once.
+
+rs <- cmr_hist |> 
+  data.frame() |> # transform table to dataframe
+  # transform from two columns to ....
+  pivot_wider(names_from = Var2, # values to build columns from
+              values_from = Freq) |> # values to fill in
+  mutate(capt_sum = rowSums(across(where(is.numeric)))) |> 
+  # here we create the capture history from all year columns with the function unite
+  unite(col = ch, # name of new column column
+        -Var1, -capt_sum, # columns that shoulbd't be united
+            sep = "", remove = TRUE) |> 
+  rename(
+    Ring_Inschrift = "Var1")
+
+
+```
+
+## to do: check how many recaptures there are!
+
+If there are only 0 and 1 then birds were only captured for one year and you cannot estimate survival. 
+Please choose another bird species!!!!!
+
+```{r}
+table(rs$capt_sum)
+```
+
+# merge the recapture data together with the data_plot data
+```{r}
+
+
+data_crm <- left_join(rs,
+                         data_plot |> 
+                           dplyr::select(
+                           Ring_Inschrift,
+                           `Artbezeichnung deutsch`,
+                           Gewicht_num_min,
+                           Fluegellaenge_num_min,
+                           Teilfederlaenge_num_min,
+                           Geschlecht),
+                         by = "Ring_Inschrift") 
+```
+
+# to do: example cmr
+
+```{r}
+model_crm <- crm(as.data.frame(data_crm), hessian  = TRUE)
+
+model_res <- predict(model_crm)
+
+data_crm_nona <- drop_na(data_crm, c(Gewicht_num_min, Geschlecht))
+
+data_crm_nona$Geschlecht <- as.factor(data_crm_nona$Geschlecht)
+
+####
+data_mod <- process.data(as.data.frame(data_crm_nona))
+
+design.Phi <-
+  list(static = c("Geschlecht", "Gewicht_num_min"))
+
+# Design matrix for detection
+design.p <- list(static = c("Geschlecht", "Gewicht_num_min"))
+
+
+# combine in one list
+design.parameters <- list(Phi = design.Phi, p = design.p)
+
+# processed data and design parameters into model design matrix
+m3_design <- make.design.data(data = data_mod,
+                              parameters = design.parameters)
+
+
+names(m3_design$Phi)
+names(m3_design$p)
+
+
+Phi.weight <- list(formula =  ~ Geschlecht) #response ~ predictor
+
+p.sex <- list(formula =  ~ Gewicht_num_min)
+
+# fit the model
+m3 <- crm(
+  data_mod,
+  m3_design,
+  hessian = TRUE,
+  model.parameters = list(Phi = Phi.weight,
+                          p = p.sex)
+)
+
+
+predict(m3)
+
+
+```
+
+
+
+
+
+<br><hr><br>
+
+<details><summary>Session Info</summary>
+
+```{r sessionInfo}
+Sys.time()
+#git2r::repository() ## uncomment if you are using GitHub
+sessionInfo()
+```
+
+</details>
