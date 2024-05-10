@@ -1,0 +1,1586 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
+
+<meta charset="utf-8">
+<meta name="generator" content="quarto-1.4.553">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+<meta name="author" content="Susanne Kohrs">
+
+<title>Capture - recapture data of birds at Rietzer See</title>
+<style>
+code{white-space: pre-wrap;}
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: min(4vw, 1.5em);}
+div.column{flex: auto; overflow-x: auto;}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+  width: 0.8em;
+  margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
+  vertical-align: middle;
+}
+/* CSS for syntax highlighting */
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+  }
+pre.numberSource { margin-left: 3em;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
+</style>
+
+
+<script src="capture_recapture_rietzer_see_files/libs/clipboard/clipboard.min.js"></script>
+<script src="capture_recapture_rietzer_see_files/libs/quarto-html/quarto.js"></script>
+<script src="capture_recapture_rietzer_see_files/libs/quarto-html/popper.min.js"></script>
+<script src="capture_recapture_rietzer_see_files/libs/quarto-html/tippy.umd.min.js"></script>
+<script src="capture_recapture_rietzer_see_files/libs/quarto-html/anchor.min.js"></script>
+<link href="capture_recapture_rietzer_see_files/libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="capture_recapture_rietzer_see_files/libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="capture_recapture_rietzer_see_files/libs/bootstrap/bootstrap.min.js"></script>
+<link href="capture_recapture_rietzer_see_files/libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="capture_recapture_rietzer_see_files/libs/bootstrap/bootstrap.min.css" rel="stylesheet" id="quarto-bootstrap" data-mode="light">
+
+
+</head>
+
+<body class="fullcontent">
+
+<div id="quarto-content" class="page-columns page-rows-contents page-layout-article">
+
+<main class="content" id="quarto-document-content">
+
+<header id="title-block-header" class="quarto-title-block default">
+<div class="quarto-title">
+<h1 class="title">Capture - recapture data of birds at Rietzer See</h1>
+</div>
+
+
+
+<div class="quarto-title-meta">
+
+    <div>
+    <div class="quarto-title-meta-heading">Author</div>
+    <div class="quarto-title-meta-contents">
+             <p>Susanne Kohrs </p>
+          </div>
+  </div>
+    
+  
+    
+  </div>
+  
+
+
+</header>
+
+
+<section id="introduction" class="level1">
+<h1>Introduction</h1>
+<ul>
+<li><p>103 different bird species</p></li>
+<li><p>Sampling period from 2000 to 2023 at nature conservation area “Rietzer See”</p></li>
+<li><p>Analysis of survival and detection probability of 13 bird species</p></li>
+</ul>
+<section id="phylogeny" class="level2">
+<h2 class="anchored" data-anchor-id="phylogeny">Phylogeny</h2>
+<p>Evolutionary relationship of 13 bird taxa for which estimation of survival and detection probability was mainly possible</p>
+<ul>
+<li>All belong to the order Passeriformes (Sperlingsvögel), suborder Passeri (Singvögel)</li>
+<li>Within Passeri three clades: Sylviida, Muscicapida, Passerida
+<ul>
+<li><p>Families within Sylviida: Paridae, Panuridae, Acrocephalidae, Phylloscopidae; Sylviidae, Locustellidae</p></li>
+<li><p>Families within Muscicapida: Muscicapidae, Turdidae</p></li>
+<li><p>Families within Passerida: Passeridae, Emberizidae</p></li>
+</ul></li>
+</ul>
+<p><img src="images/phylo_tree_ger.png" class="img-fluid"></p>
+</section>
+<section id="overview-of-characteristics" class="level2">
+<h2 class="anchored" data-anchor-id="overview-of-characteristics">Overview of characteristics</h2>
+<table class="table">
+<colgroup>
+<col style="width: 12%">
+<col style="width: 12%">
+<col style="width: 12%">
+<col style="width: 12%">
+<col style="width: 12%">
+<col style="width: 12%">
+<col style="width: 12%">
+<col style="width: 12%">
+</colgroup>
+<tbody>
+<tr class="odd">
+<td>Family</td>
+<td>Taxa</td>
+<td>Max. age (years)</td>
+<td>Length (cm)</td>
+<td>Weight (g)</td>
+<td>Breeding season</td>
+<td>Clutch size (eggs)</td>
+<td>Breeding times (max.)</td>
+</tr>
+<tr class="even">
+<td>Emberizidae</td>
+<td>Rohrammer</td>
+<td>12</td>
+<td>14-17</td>
+<td>10 -28</td>
+<td>April - August</td>
+<td>4 -5</td>
+<td>2</td>
+</tr>
+<tr class="odd">
+<td></td>
+<td>Goldammer</td>
+<td>13</td>
+<td>16 - 17</td>
+<td>20 - 36,5</td>
+<td>April - September</td>
+<td>3 -5</td>
+<td>3</td>
+</tr>
+<tr class="even">
+<td>Passeridae</td>
+<td>Feldsperling</td>
+<td>13</td>
+<td>14 - 15</td>
+<td>17 - 30</td>
+<td>April - January</td>
+<td>2 - 7</td>
+<td>4</td>
+</tr>
+<tr class="odd">
+<td>Turdidae</td>
+<td>Amsel</td>
+<td>22</td>
+<td>24 - 27</td>
+<td>85 - 105</td>
+<td>March - September</td>
+<td>2 - 6</td>
+<td>2</td>
+</tr>
+<tr class="even">
+<td>Muscicapi- dae</td>
+<td>Weißstern. Blaukehlchen</td>
+<td>11</td>
+<td>13 - 15</td>
+<td>17 - 20</td>
+<td>April - August</td>
+<td>4 - 7</td>
+<td>2</td>
+</tr>
+<tr class="odd">
+<td>Paridae</td>
+<td>Blaumeise</td>
+<td></td>
+<td>11 - 12</td>
+<td>8 - 15</td>
+<td>April - June</td>
+<td>7 - 13</td>
+<td>3</td>
+</tr>
+<tr class="even">
+<td>Panuridae</td>
+<td>Bartmeise</td>
+<td>6</td>
+<td>14 - 17</td>
+<td>11 - 21</td>
+<td>March - September</td>
+<td>4 - 8</td>
+<td>4</td>
+</tr>
+<tr class="odd">
+<td>Locustellidae</td>
+<td>Rohrschwirl</td>
+<td>7</td>
+<td>13 - 14</td>
+<td>12 - 21</td>
+<td>April - July</td>
+<td>4 - 6</td>
+<td>2</td>
+</tr>
+<tr class="even">
+<td>Acrocephali-dae</td>
+<td>Teichrohr-sänger</td>
+<td>16</td>
+<td>13</td>
+<td>8 - 20</td>
+<td>May - August</td>
+<td>3 - 5</td>
+<td>2</td>
+</tr>
+<tr class="odd">
+<td></td>
+<td>Drosselrohr-sänger</td>
+<td>10</td>
+<td>19 - 20</td>
+<td>22 - 31</td>
+<td>mid-May - July</td>
+<td>4 - 6</td>
+<td>2</td>
+</tr>
+<tr class="even">
+<td></td>
+<td>Schilfrohr-sänger</td>
+<td>11</td>
+<td>11 - 12</td>
+<td>8 - 17</td>
+<td>late-April - July</td>
+<td>4 - 6</td>
+<td>2</td>
+</tr>
+<tr class="odd">
+<td>Sylviidae</td>
+<td>Gartengras-mücke</td>
+<td>14</td>
+<td>14</td>
+<td>16 - 22</td>
+<td>April - July</td>
+<td>4 - 5</td>
+<td>2</td>
+</tr>
+<tr class="even">
+<td>Phylloscopi-dae</td>
+<td>Fitis</td>
+<td>10</td>
+<td>11 - 13</td>
+<td>6 - 15</td>
+<td>April - July</td>
+<td>4 - 8</td>
+<td>2</td>
+</tr>
+</tbody>
+</table>
+</section>
+</section>
+<section id="exploratory-data-analysis" class="level1">
+<h1>Exploratory data analysis</h1>
+<section id="abundance-over-the-years" class="level2">
+<h2 class="anchored" data-anchor-id="abundance-over-the-years">Abundance over the years</h2>
+<p>Stacked bar plot showing cumulative abundance of the 13 selected bird taxa for each each year, while showing individual species contribution represented by different colors.</p>
+<ul>
+<li><p>Y-axis: number of sampled individuals</p></li>
+<li><p>Highest total abundance in 2000 and 2021: more than 950 and 1050 individuals</p></li>
+<li><p>Main abundance contribution: Rohrammer, Bartmeise, Teichrohrsänger, Schilfrohrsänger</p></li>
+<li><p>Abundance decline between 2006 and 2018 with less than 450 Individuals in 2010 &amp; 2012</p></li>
+<li><p>Main decline in Schilfrohrsänger, also Teichrohrsänger, Bartmeise, Rohrammer</p></li>
+</ul>
+<p><img src="images/ggplot_sp_yr.png" class="img-fluid"></p>
+<p>Box plot (1st row) and bar plot with mean and standard deviation of sampled individuals per year (2nd row) for each taxa showing spread and variation of abundance per year</p>
+<ul>
+<li><p>Largest mean and variation of sampled individuals per year for Rohrammer, Bartmeise, Teichrohrsänger and Schilfrohrsänger</p></li>
+<li><p>With Bartmeise and Teichrohrsänger showing greatest variation around the mean</p></li>
+<li><p>Pronounced standard deviation in Feldsperling attributable to few (2) outliers</p></li>
+</ul>
+<table class="table">
+<tbody>
+<tr class="odd">
+<td><img src="images/ggplot_sp_box-01.png" class="img-fluid"></td>
+</tr>
+<tr class="even">
+<td><img src="images/ggplot_sp_sd.png" class="img-fluid"></td>
+</tr>
+</tbody>
+</table>
+<p>Bar plot for each taxa showing number of individuals for each year, while showing male/female composition</p>
+<ul>
+<li><p>Fitis, Rohrschwirl, Gartengrasmücke and Schilfrohrsänger have lower abundances during 2005 and 2018</p></li>
+<li><p>Drosselrohrsänger abundance higher during 2005 and 2014</p></li>
+<li><p>Bartmeise and Blaumeise have pronounced abundance decline in 2010/11; abundance appears somewhat opposed to each other:</p>
+<ul>
+<li><p>2000 to 2004: high abundance of Bartmeise vs.&nbsp;low abundance of Blaumeise</p></li>
+<li><p>2021 to 2023: low abundance of Bartmeise vs.&nbsp;high abundance of Blaumeise</p></li>
+</ul></li>
+<li><p>Amsel and Weißsterniges Blaukehlchen have main abundance in the last 8 to 9 years of the sampling period (2014 to 2023)</p></li>
+<li><p>Feldsperling has main abundance in the first 9 years of the sampling period (2000 to 2009)</p></li>
+<li><p>Large occurrence of unknown sex in Fitis, Rohrschwirl, Feldsperling, Gartengrasmücke and Blaumeise -&gt; needs to be considered for parameter estimation with sex as covariate</p></li>
+</ul>
+<p><img src="images/ggplot_sp_sex_yr_I.png" class="img-fluid"></p>
+</section>
+</section>
+<section id="statistical-analysis" class="level1">
+<h1>Statistical analysis</h1>
+<p>Cormack-Jolly-Seber model for open capture-recapture analysis -&gt; estimates of detection and survival probability in open population where size changes over time due to death, (permanent) emigration</p>
+<p>Assumptions:</p>
+<ul>
+<li><p>Animals randomly sampled</p></li>
+<li><p>Equal capture probabilities for all animals at each sampling event</p></li>
+<li><p>No loss of marks</p></li>
+<li><p>Homogeneity of capture and survival probabilities</p></li>
+</ul>
+<section id="constant-survival-and-detection-probability-basic-model" class="level2">
+<h2 class="anchored" data-anchor-id="constant-survival-and-detection-probability-basic-model">Constant survival and detection probability: Basic model</h2>
+<p>Estimates of survival (Phi) and detection (p) probability for each taxa from the CJS-model assuming constant survival and detection probability.</p>
+<ul>
+<li><p>MLE for survival probability mostly larger than detection probability</p>
+<ul>
+<li>Phi ≈ 40 - 70%, p ≈ 10 - 30%</li>
+</ul></li>
+<li><p>Except for Feldsperling, Blaumeise, Bartmeise, Rohrschwirl, and Fitis -&gt; mostly smaller and lighter birds</p>
+<ul>
+<li><p>Phi ≈ 20 - 40%, p ≈ 40 - 70% for Blaumeise, Bartmeise, Rohrschwirl</p></li>
+<li><p>Phi and p similar ≈ 25 - 30% for Feldsperling</p></li>
+<li><p>Phi ≈ 15 - 20%, p ≈ 25 - 30% for Fitis but large confidence interval around p</p></li>
+</ul></li>
+</ul>
+<p><img src="images/ggplot_est_basic.png" class="img-fluid"></p>
+</section>
+<section id="varying-survival-and-detection-probability" class="level2">
+<h2 class="anchored" data-anchor-id="varying-survival-and-detection-probability">Varying survival and detection probability</h2>
+<p>Estimates for Phi and p varying over time and varying on various covariates:</p>
+<ul>
+<li><p>Time interval: assuming even sampling effort</p></li>
+<li><p>Sex: male, female, unknown</p></li>
+<li><p>Observer: different samplers over entire sampling period might contribute to different detection probabilities due to different effort</p></li>
+<li><p>Temperature: DWD Climate Data Center (CDC): Monthly mean of station observations of air temperature at 2 m above ground in °C for Germany, version v21.3, last accessed: 8.04.2024.</p></li>
+</ul>
+<section id="fitis-willow-warbler-phylloscopus-trochilus" class="level3">
+<h3 class="anchored" data-anchor-id="fitis-willow-warbler-phylloscopus-trochilus"><strong>Fitis / Willow Warbler</strong> (<em>Phylloscopus trochilus)</em></h3>
+<section id="aic-values-of-six-best-models" class="level4">
+<h4 class="anchored" data-anchor-id="aic-values-of-six-best-models">AIC values of six best models</h4>
+<p>Sex (= “Geschlecht”) seems best to model parameter estimates, as the first five models with the lowest AIC have one or both parameters, but mainly survival probability, estimated based on sex. Estimation for detection probability varies between no covariate, sex, observer and even time. All five models are better than the basic model with constant probability for Phi and p.</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a>AIC_Fitis <span class="ot">&lt;-</span> <span class="fu">read.csv</span>(<span class="st">"AIC/AIC_Fitis.csv"</span>)</span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a>AIC_Fitis[<span class="fu">order</span>(AIC_Fitis<span class="sc">$</span>AIC),<span class="dv">2</span><span class="sc">:</span><span class="dv">6</span>]</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>                            model npar      AIC   DeltaAIC       weight
+1           Phi(~Geschlecht)p(~1)    4 132.9702  0.0000000 4.608836e-01
+2           Phi(~1)p(~Geschlecht)    4 133.7171  0.7469255 3.172477e-01
+3    Phi(~Geschlecht)p(~Initials)   14 135.2048  2.2346402 1.507805e-01
+7        Phi(~Geschlecht)p(~time)   26 135.9915  0.0000000 9.936768e-01
+4  Phi(~Geschlecht)p(~Geschlecht)    6 136.8926  3.9223833 6.484202e-02
+5                    Phi(~1)p(~1)    2 142.1075  9.1373112 4.780236e-03
+10       Phi(~time)p(~Geschlecht)   26 143.5908  0.0000000 9.834484e-01
+6             Phi(~1)p(~Initials)   12 144.4715 11.5012523 1.465973e-03
+8                 Phi(~1)p(~time)   24 146.1058 10.1143606 6.323240e-03
+11                Phi(~time)p(~1)   24 151.7671  8.1763081 1.649259e-02
+13       Phi(~Geschlecht)p(~year)   26 153.6032  0.0000000 9.853088e-01
+14                Phi(~1)p(~year)   24 162.0146  8.4114184 1.469116e-02
+12         Phi(~time)p(~Initials)   34 163.0315 19.4407058 5.905490e-05
+16                Phi(~1)p(~Temp)   55 180.9895  0.0000000 1.000000e+00
+17                Phi(~Temp)p(~1)   55 182.5975  0.0000000 1.000000e+00
+9              Phi(~time)p(~time)   46 186.7927 50.8012169 9.244875e-12
+15             Phi(~year)p(~year)   46 201.4674 47.8642063 3.980999e-11
+18   Phi(~Geschlecht * Temp)p(~1)  111 280.0082  0.0000000 1.000000e+00</code></pre>
+</div>
+</div>
+</section>
+<section id="parameter-estimates-for-best-model-phi.sex_p.dot" class="level4">
+<h4 class="anchored" data-anchor-id="parameter-estimates-for-best-model-phi.sex_p.dot">Parameter estimates for best model: Phi.sex_p.dot</h4>
+<ul>
+<li><p>Phi: male = 21,5%, female and unknown &lt; 5% (left plot, 1st row)</p></li>
+<li><p>p = 40% (left plot, 2nd row)</p></li>
+<li><p>Differences in survival estimate between male and female statistically not necessarily significant, as confidence interval of survival estimate of male sex within confidence interval of female sex</p></li>
+<li><p>Differences in survival estimate between male and unknown sex statistically likely, as estimate of male sex outside of confidence interval of unknown sex</p></li>
+<li><p>Plotting number of sampled individuals of each sex against number of recapture (right plot) shows approx. 40% of individuals captured only one time is of unknown sex, while sex is either male or female when recaptured a second time, and only male when recaptured a third time</p></li>
+</ul>
+<p>=&gt; caution with survival estimates, due to large amount of unknown sex in the data set</p>
+<table class="table">
+<tbody>
+<tr class="odd">
+<td><img src="images/fitis.png" class="img-fluid"></td>
+<td><img src="images/ggplot_sex_cs_06.png" class="img-fluid"></td>
+</tr>
+</tbody>
+</table>
+</section>
+</section>
+<section id="gartengrasmücke-garden-warbler-sylvia-borin" class="level3">
+<h3 class="anchored" data-anchor-id="gartengrasmücke-garden-warbler-sylvia-borin"><strong>Gartengrasmücke / Garden Warbler</strong> (Sylvia borin)</h3>
+<section id="aic-values-of-six-best-models-1" class="level4">
+<h4 class="anchored" data-anchor-id="aic-values-of-six-best-models-1">AIC values of six best models</h4>
+<ul>
+<li><p>First eight models with lowest AIC and better than basic model</p></li>
+<li><p>For phi temperature or no covariate best, otherwise sex or time interval</p></li>
+<li><p>For p no covariate or temperature best, otherwise also time interval</p></li>
+</ul>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb3"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a>AIC_Gartengrasmücke <span class="ot">&lt;-</span> <span class="fu">read.csv</span>(<span class="st">"AIC/AIC_Gartengrasmücke.csv"</span>)</span>
+<span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a>AIC_Gartengrasmücke[<span class="fu">order</span>(AIC_Gartengrasmücke<span class="sc">$</span>AIC),<span class="dv">2</span><span class="sc">:</span><span class="dv">6</span>]</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>                            model npar      AIC    DeltaAIC       weight
+17                Phi(~Temp)p(~1)   42 127.8929  0.00000000 1.000000e+00
+16                Phi(~1)p(~Temp)   42 129.3100  0.00000000 1.000000e+00
+7                 Phi(~1)p(~time)   24 132.5529  0.00000000 8.686987e-01
+8        Phi(~Geschlecht)p(~time)   26 136.3319  3.77900466 1.313012e-01
+10                Phi(~time)p(~1)   24 137.2865  0.00000000 7.586308e-01
+1           Phi(~1)p(~Geschlecht)    4 137.4899  0.00000000 3.101970e-01
+2  Phi(~Geschlecht)p(~Geschlecht)    6 137.5625  0.07259598 2.991393e-01
+3           Phi(~Geschlecht)p(~1)    4 138.5074  1.01749934 1.865050e-01
+4                    Phi(~1)p(~1)    2 139.1407  1.65084738 1.358816e-01
+11       Phi(~time)p(~Geschlecht)   26 139.5844  2.29783743 2.404703e-01
+5             Phi(~1)p(~Initials)   11 140.9378  3.44794912 5.532545e-02
+6    Phi(~Geschlecht)p(~Initials)   13 143.8418  6.35196330 1.295168e-02
+12         Phi(~time)p(~Initials)   33 150.7627 13.47621064 8.988941e-04
+13                Phi(~1)p(~year)   24 160.4530  0.00000000 7.439027e-01
+14       Phi(~Geschlecht)p(~year)   26 162.5857  2.13270585 2.560973e-01
+9              Phi(~time)p(~time)   46 166.8819 34.32898067 3.050884e-08
+15             Phi(~year)p(~year)   46 198.6209 38.16793632 3.832252e-09
+18   Phi(~Geschlecht * Temp)p(~1)   83 207.1645  0.00000000 1.000000e+00</code></pre>
+</div>
+</div>
+</section>
+<section id="parameter-estimates-for-best-model-phi.temp_p.dot" class="level4">
+<h4 class="anchored" data-anchor-id="parameter-estimates-for-best-model-phi.temp_p.dot">Parameter estimates for best model: Phi.temp_p.dot</h4>
+<ul>
+<li><p>p = 31% (1st plot, 2nd row) detection probability higher than detection probability in basic model (p = 15%)</p></li>
+<li><p>Phi (1st plot, 1st row): several probability peaks for survival for temperatures of around 9°, between 13° - 17°, and at 19°C</p></li>
+<li><p>Problem of statistical significance due to wide confidence interval around survival estimates</p></li>
+<li><p>Survival peaks in model align more or less with higher numbers of sampled individuals at those temperatures (2nd plot) -&gt; several peaks between 12° and 19°C</p></li>
+</ul>
+<p>=&gt; Caution with survival estimates, due to cut off of capture data, as temperature starts only in 2004</p>
+<table class="table">
+<tbody>
+<tr class="odd">
+<td><img src="images/gartengrasmücke.png" class="img-fluid"></td>
+</tr>
+<tr class="even">
+<td><img src="images/ggplot_sp_capt_tmp_12-01.png" class="img-fluid"></td>
+</tr>
+<tr class="odd">
+<td><img src="images/ggplot_tmp_ggm.png" class="img-fluid"></td>
+</tr>
+</tbody>
+</table>
+</section>
+</section>
+<section id="schilfrohrsänger-sedge-warbler-acrocephalus-schoenobaenus" class="level3">
+<h3 class="anchored" data-anchor-id="schilfrohrsänger-sedge-warbler-acrocephalus-schoenobaenus"><strong>Schilfrohrsänger / Sedge Warbler</strong> (<em>Acrocephalus schoenobaenus</em>)</h3>
+<section id="aic-values-of-six-best-models-2" class="level4">
+<h4 class="anchored" data-anchor-id="aic-values-of-six-best-models-2">AIC values of six best models</h4>
+<ul>
+<li><p>Almost all models better than basic model</p></li>
+<li><p>For phi no covariate or temperature best, otherwise sex or time interval</p></li>
+<li><p>For p temperature or no covariate best, otherwise also sex or time interval</p></li>
+</ul>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb5"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a>AIC_Schilfrohrsänger <span class="ot">&lt;-</span> <span class="fu">read.csv</span>(<span class="st">"AIC/AIC_Schilfrohrsänger.csv"</span>)</span>
+<span id="cb5-2"><a href="#cb5-2" aria-hidden="true" tabindex="-1"></a>AIC_Schilfrohrsänger[<span class="fu">order</span>(AIC_Schilfrohrsänger<span class="sc">$</span>AIC),<span class="dv">2</span><span class="sc">:</span><span class="dv">6</span>]</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>                            model npar      AIC   DeltaAIC       weight
+16                Phi(~1)p(~Temp)   73  994.870  0.0000000 1.000000e+00
+17                Phi(~Temp)p(~1)   73  996.364  0.0000000 1.000000e+00
+18   Phi(~Geschlecht * Temp)p(~1)  171 1101.915  0.0000000 1.000000e+00
+10       Phi(~time)p(~Geschlecht)   26 1265.050  0.0000000 1.000000e+00
+7        Phi(~Geschlecht)p(~time)   26 1275.117  0.0000000 9.985505e-01
+8              Phi(~time)p(~time)   46 1288.195 13.0781766 1.443710e-03
+9                 Phi(~1)p(~time)   24 1299.217 24.1000093 5.836056e-06
+1           Phi(~1)p(~Geschlecht)    4 1306.550  0.0000000 6.168697e-01
+2  Phi(~Geschlecht)p(~Geschlecht)    6 1307.504  0.9542124 3.828149e-01
+11                Phi(~time)p(~1)   24 1313.226 48.1760805 3.456981e-11
+12         Phi(~time)p(~Initials)   34 1314.676 49.6263128 1.674107e-11
+3           Phi(~Geschlecht)p(~1)    4 1322.823 16.2733988 1.804969e-04
+4    Phi(~Geschlecht)p(~Initials)   14 1323.405 16.8551772 1.349392e-04
+13       Phi(~Geschlecht)p(~year)   27 1324.096  0.0000000 9.999975e-01
+5             Phi(~1)p(~Initials)   12 1342.292 35.7419036 1.068901e-08
+6                    Phi(~1)p(~1)    2 1347.682 41.1318261 7.219895e-10
+14                Phi(~1)p(~year)   25 1350.982 26.8856232 1.451644e-06
+15             Phi(~year)p(~year)   48 1351.550 27.4542792 1.092391e-06</code></pre>
+</div>
+</div>
+</section>
+<section id="parameter-estimates-for-best-model-phi.dot_p.temp" class="level4">
+<h4 class="anchored" data-anchor-id="parameter-estimates-for-best-model-phi.dot_p.temp">Parameter estimates for best model: Phi.dot_p.temp</h4>
+<ul>
+<li><p>Phi = 44% (1st plot, 1st row) survival probability higher than survival probability in basic model (Phi = 37%)</p></li>
+<li><p>p (1st plot, 2nd row): difficult to see clear trend in detection probability for temperature -&gt; possibly due to overfitting</p></li>
+<li><p>Problem of statistical significance due to wide confidence interval around detection estimates</p></li>
+<li><p>Trend in detection probability between 15° - 20°C in model mirrors increasing numbers of sampled individuals for temperatures closer to 20°C (2nd plot)</p></li>
+</ul>
+<p>=&gt; Caution with detection estimates, due to cut off of capture data, as temperature starts only in 2004</p>
+<table class="table">
+<tbody>
+<tr class="odd">
+<td><img src="images/schilfrohrsänger.png" class="img-fluid"></td>
+</tr>
+<tr class="even">
+<td><img src="images/ggplot_sp_capt_tmp_04.png" class="img-fluid"></td>
+</tr>
+</tbody>
+</table>
+</section>
+</section>
+<section id="drosselrohrsänger-great-reed-warbler-acrocephalus-arundinaceus" class="level3">
+<h3 class="anchored" data-anchor-id="drosselrohrsänger-great-reed-warbler-acrocephalus-arundinaceus"><strong>Drosselrohrsänger / Great Reed-warbler</strong> (<em>Acrocephalus arundinaceus</em>)</h3>
+<section id="aic-values-of-six-best-models-3" class="level4">
+<h4 class="anchored" data-anchor-id="aic-values-of-six-best-models-3">AIC values of six best models</h4>
+<ul>
+<li><p>Almost all models better than basic model</p></li>
+<li><p>For phi temperature or no covariate best, otherwise also sex</p></li>
+<li><p>For p no covariate or temperature best, otherwise time interval or observer (=“Initials”)</p></li>
+</ul>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb7"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a>AIC_Drosselrohrsänger <span class="ot">&lt;-</span> <span class="fu">read.csv</span>(<span class="st">"AIC/AIC_Drosselrohrsänger.csv"</span>)</span>
+<span id="cb7-2"><a href="#cb7-2" aria-hidden="true" tabindex="-1"></a>AIC_Drosselrohrsänger[<span class="fu">order</span>(AIC_Drosselrohrsänger<span class="sc">$</span>AIC),<span class="dv">2</span><span class="sc">:</span><span class="dv">6</span>]</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>                            model npar      AIC  DeltaAIC       weight
+17                Phi(~Temp)p(~1)   55 315.9197  0.000000 1.000000e+00
+16                Phi(~1)p(~Temp)   55 323.4488  0.000000 1.000000e+00
+7        Phi(~Geschlecht)p(~time)   26 359.4456  0.000000 8.828673e-01
+8                 Phi(~1)p(~time)   24 363.4853  4.039743 1.171322e-01
+1    Phi(~Geschlecht)p(~Initials)   13 364.5380  0.000000 9.059941e-01
+2             Phi(~1)p(~Initials)   11 369.0734  4.535411 9.381525e-02
+10         Phi(~time)p(~Initials)   33 370.1713  0.000000 9.566884e-01
+11       Phi(~time)p(~Geschlecht)   26 377.5204  7.349192 2.426129e-02
+12                Phi(~time)p(~1)   24 378.0040  7.832783 1.905036e-02
+3  Phi(~Geschlecht)p(~Geschlecht)    6 382.4162 17.878205 1.188290e-04
+4           Phi(~Geschlecht)p(~1)    4 384.2533 19.715321 4.742395e-05
+5           Phi(~1)p(~Geschlecht)    4 386.1946 21.656616 1.796598e-05
+6                    Phi(~1)p(~1)    2 388.2474 23.709435 6.437051e-06
+9              Phi(~time)p(~time)   46 388.4463 29.000698 4.451167e-07
+13       Phi(~Geschlecht)p(~year)   26 400.3945  0.000000 8.016287e-01
+14                Phi(~1)p(~year)   24 403.1875  2.793012 1.983712e-01
+18   Phi(~Geschlecht * Temp)p(~1)  112 416.6858  0.000000 1.000000e+00
+15             Phi(~year)p(~year)   46 432.1223 31.727837 1.033620e-07</code></pre>
+</div>
+</div>
+</section>
+<section id="parameter-estimates-for-best-model-phi.temp_p.dot-1" class="level4">
+<h4 class="anchored" data-anchor-id="parameter-estimates-for-best-model-phi.temp_p.dot-1">Parameter estimates for best model: Phi.temp_p.dot</h4>
+<ul>
+<li><p>p = 25% (1st plot, 2nd row) detection probability higher than detection probability in basic model (p = 16%)</p></li>
+<li><p>Phi (1st plot, 1st row): several probability peaks for survival for temperatures between 8° - 11°, 12° - 13°, 16° - 20°, and at 22°C</p></li>
+<li><p>Survival peaks in model mirror higher numbers of sampled individuals at those temperatures (2nd plot) -&gt; similar hill shape in both plots between 16° and 20°C</p></li>
+</ul>
+<p>=&gt; Caution with survival estimates: neglect of capture data before 2004 and wide confidence interval around estimates</p>
+<table class="table">
+<tbody>
+<tr class="odd">
+<td><img src="images/drosselrohrsänger.png" class="img-fluid"></td>
+</tr>
+<tr class="even">
+<td><img src="images/ggplot_sp_capt_tmp_08.png" class="img-fluid"></td>
+</tr>
+</tbody>
+</table>
+</section>
+</section>
+<section id="teichrohrsänger-common-reed-warbler-acrocephalus-scirpaceus" class="level3">
+<h3 class="anchored" data-anchor-id="teichrohrsänger-common-reed-warbler-acrocephalus-scirpaceus"><strong>Teichrohrsänger / Common Reed-warbler</strong> (<em>Acrocephalus</em> scirpaceus)</h3>
+<section id="aic-values-of-six-best-models-4" class="level4">
+<h4 class="anchored" data-anchor-id="aic-values-of-six-best-models-4">AIC values of six best models</h4>
+<ul>
+<li><p>All models better than basic model</p></li>
+<li><p>For phi no covariate or sex combined with temperature best, otherwise also temperature alone or time interval</p></li>
+<li><p>For p temperature or no covariate best, otherwise sex or time interval</p></li>
+</ul>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb9"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb9-1"><a href="#cb9-1" aria-hidden="true" tabindex="-1"></a>AIC_Teichrohrsänger <span class="ot">&lt;-</span> <span class="fu">read.csv</span>(<span class="st">"AIC/AIC_Teichrohrsänger.csv"</span>)</span>
+<span id="cb9-2"><a href="#cb9-2" aria-hidden="true" tabindex="-1"></a>AIC_Teichrohrsänger[<span class="fu">order</span>(AIC_Teichrohrsänger<span class="sc">$</span>AIC),<span class="dv">2</span><span class="sc">:</span><span class="dv">6</span>]</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>                            model npar      AIC   DeltaAIC       weight
+16                Phi(~1)p(~Temp)   86 4461.596   0.000000 1.000000e+00
+18   Phi(~Geschlecht * Temp)p(~1)  208 4477.572   0.000000 1.000000e+00
+17                Phi(~Temp)p(~1)   86 4482.040   0.000000 1.000000e+00
+10       Phi(~time)p(~Geschlecht)   26 5559.278   0.000000 1.000000e+00
+7        Phi(~Geschlecht)p(~time)   26 5580.003   0.000000 1.000000e+00
+11         Phi(~time)p(~Initials)   36 5614.183  54.905358 1.195234e-12
+8              Phi(~time)p(~time)   46 5644.376  64.373886 1.050481e-14
+9                 Phi(~1)p(~time)   24 5655.834  75.831495 3.415074e-17
+1    Phi(~Geschlecht)p(~Initials)   16 5655.938   0.000000 9.733494e-01
+2           Phi(~1)p(~Geschlecht)    4 5663.444   7.505889 2.282369e-02
+3  Phi(~Geschlecht)p(~Geschlecht)    6 5667.015  11.077372 3.826908e-03
+12                Phi(~time)p(~1)   24 5680.142 120.864160 5.684353e-27
+13       Phi(~Geschlecht)p(~year)   27 5708.245   0.000000 1.000000e+00
+4           Phi(~Geschlecht)p(~1)    4 5710.791  54.853195 1.194122e-12
+5             Phi(~1)p(~Initials)   14 5719.771  63.833196 1.339881e-14
+14             Phi(~year)p(~year)   48 5764.246  56.000941 6.911149e-13
+15                Phi(~1)p(~year)   25 5783.678  75.433630 4.166731e-17
+6                    Phi(~1)p(~1)    2 5790.350 134.412454 6.323758e-30</code></pre>
+</div>
+</div>
+</section>
+<section id="parameter-estimates-for-best-model-phi.dot_p.temp-1" class="level4">
+<h4 class="anchored" data-anchor-id="parameter-estimates-for-best-model-phi.dot_p.temp-1">Parameter estimates for best model: Phi.dot_p.temp</h4>
+<ul>
+<li><p>Phi = 55% (1st plot, 1st row) survival probability similar survival probability in basic model (Phi = 49%)</p></li>
+<li><p>p (1st plot, 2nd row): difficult to see clear trend in detection probability for temperature -&gt; possibly due to over fitting</p></li>
+<li><p>Unimodal distribution in numbers of sampled individuals for temperature with mode around 19°C (2nd plot)</p></li>
+</ul>
+<p>=&gt; Caution with detection estimates: neglect of capture data before 2004 and wide confidence interval around estimates</p>
+<table class="table">
+<tbody>
+<tr class="odd">
+<td><img src="images/teichrohrsänger.png" class="img-fluid"></td>
+</tr>
+<tr class="even">
+<td><img src="images/ggplot_sp_capt_tmp_05.png" class="img-fluid"></td>
+</tr>
+</tbody>
+</table>
+</section>
+</section>
+<section id="rohrschwirl-savis-warbler-locustella-luscinioides" class="level3">
+<h3 class="anchored" data-anchor-id="rohrschwirl-savis-warbler-locustella-luscinioides"><strong>Rohrschwirl / Savi’s Warbler</strong> (<em>Locustella luscinioides</em>)</h3>
+<section id="aic-values-of-six-best-models-5" class="level4">
+<h4 class="anchored" data-anchor-id="aic-values-of-six-best-models-5">AIC values of six best models</h4>
+<ul>
+<li><p>Almost all models better than basic model</p></li>
+<li><p>For phi no covariate or temperature best, otherwise sex or time interval</p></li>
+<li><p>For p temperature or no covariate best, otherwise time interval or sex</p></li>
+</ul>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb11"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb11-1"><a href="#cb11-1" aria-hidden="true" tabindex="-1"></a>AIC_Rohrschwirl <span class="ot">&lt;-</span> <span class="fu">read.csv</span>(<span class="st">"AIC/AIC_Rohrschwirl.csv"</span>)</span>
+<span id="cb11-2"><a href="#cb11-2" aria-hidden="true" tabindex="-1"></a>AIC_Rohrschwirl[<span class="fu">order</span>(AIC_Rohrschwirl<span class="sc">$</span>AIC),<span class="dv">2</span><span class="sc">:</span><span class="dv">6</span>]</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>                            model npar      AIC  DeltaAIC       weight
+16                Phi(~1)p(~Temp)   77 494.2036  0.000000 1.000000e+00
+17                Phi(~Temp)p(~1)   77 497.3663  0.000000 1.000000e+00
+7        Phi(~Geschlecht)p(~time)   26 540.1030  0.000000 9.999998e-01
+10       Phi(~time)p(~Geschlecht)   26 559.2547  0.000000 9.999956e-01
+8                 Phi(~1)p(~time)   24 570.5344 30.431415 2.465484e-07
+1           Phi(~Geschlecht)p(~1)    4 572.1127  0.000000 5.941601e-01
+2    Phi(~Geschlecht)p(~Initials)   13 573.9066  1.793941 2.423005e-01
+3  Phi(~Geschlecht)p(~Geschlecht)    6 575.1765  3.063806 1.284123e-01
+4           Phi(~1)p(~Geschlecht)    4 577.7692  5.656511 3.512431e-02
+11         Phi(~time)p(~Initials)   33 584.6975 25.442811 2.986495e-06
+12                Phi(~time)p(~1)   24 586.2621 27.007374 1.365908e-06
+13       Phi(~Geschlecht)p(~year)   26 586.8523  0.000000 9.999964e-01
+9              Phi(~time)p(~time)   46 592.3381 52.235124 4.542415e-12
+5             Phi(~1)p(~Initials)   11 597.0509 24.938205 2.283711e-06
+6                    Phi(~1)p(~1)    2 599.6258 27.513055 6.302596e-07
+14                Phi(~1)p(~year)   24 611.8986 25.046366 3.641239e-06
+18   Phi(~Geschlecht * Temp)p(~1)  172 635.4469  0.000000 1.000000e+00
+15             Phi(~year)p(~year)   46 639.9707 53.118449 2.920612e-12</code></pre>
+</div>
+</div>
+</section>
+<section id="parameter-estimates-for-best-model-phi.dot_p.temp-2" class="level4">
+<h4 class="anchored" data-anchor-id="parameter-estimates-for-best-model-phi.dot_p.temp-2">Parameter estimates for best model: Phi.dot_p.temp</h4>
+<ul>
+<li><p>Phi = 30% (1st plot, 1st row) survival probability similar survival probability in basic model (Phi = 26%)</p></li>
+<li><p>p (1st plot, 2nd row): no clear trend in detection probability for temperature -&gt; over fitting?</p></li>
+<li><p>Several peaks in numbers of sampled individuals over the entire range of temperatures (2nd plot) -&gt; for temperature range under 15°C peaks in detection probability and numbers of individuals similar</p></li>
+</ul>
+<p>=&gt; Caution with detection estimates: neglect of capture data before 2004 and wide confidence interval around estimates</p>
+<table class="table">
+<tbody>
+<tr class="odd">
+<td><img src="images/rohrschwirl.png" class="img-fluid"></td>
+</tr>
+<tr class="even">
+<td><img src="images/ggplot_sp_capt_tmp_07.png" class="img-fluid"></td>
+</tr>
+</tbody>
+</table>
+</section>
+</section>
+<section id="bartmeise-bearded-reedling-panurus-biarmicus" class="level3">
+<h3 class="anchored" data-anchor-id="bartmeise-bearded-reedling-panurus-biarmicus"><strong>Bartmeise / Bearded Reedling</strong> (<em>Panurus biarmicus)</em></h3>
+<section id="aic-values-of-six-best-models-6" class="level4">
+<h4 class="anchored" data-anchor-id="aic-values-of-six-best-models-6">AIC values of six best models</h4>
+<ul>
+<li><p>Almost all models better than basic model</p></li>
+<li><p>For phi no covariate or temperature best, otherwise sex combined with temperature or time interval</p></li>
+<li><p>For p temperature or no covariate best, otherwise initials</p></li>
+</ul>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb13"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb13-1"><a href="#cb13-1" aria-hidden="true" tabindex="-1"></a>AIC_Bartmeise <span class="ot">&lt;-</span> <span class="fu">read.csv</span>(<span class="st">"AIC/AIC_Bartmeise.csv"</span>)</span>
+<span id="cb13-2"><a href="#cb13-2" aria-hidden="true" tabindex="-1"></a>AIC_Bartmeise[<span class="fu">order</span>(AIC_Bartmeise<span class="sc">$</span>AIC),<span class="dv">2</span><span class="sc">:</span><span class="dv">6</span>]</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>                            model npar      AIC    DeltaAIC       weight
+16                Phi(~1)p(~Temp)  133 4712.694   0.0000000 1.000000e+00
+17                Phi(~Temp)p(~1)  133 4718.191   0.0000000 1.000000e+00
+18   Phi(~Geschlecht * Temp)p(~1)  259 4885.123   0.0000000 1.000000e+00
+10         Phi(~time)p(~Initials)   38 6005.616   0.0000000 1.000000e+00
+7              Phi(~time)p(~time)   46 6031.791   0.0000000 1.000000e+00
+11       Phi(~time)p(~Geschlecht)   26 6051.792  46.1760403 9.397238e-11
+12                Phi(~time)p(~1)   24 6052.307  46.6910561 7.263836e-11
+8                 Phi(~1)p(~time)   24 6168.210 136.4187717 2.382540e-30
+9        Phi(~Geschlecht)p(~time)   26 6168.253 136.4618352 2.331788e-30
+13             Phi(~year)p(~year)   46 6354.265   0.0000000 9.995872e-01
+1             Phi(~1)p(~Initials)   16 6369.375   0.0000000 6.099195e-01
+2    Phi(~Geschlecht)p(~Initials)   18 6370.269   0.8939477 3.900805e-01
+14                Phi(~1)p(~year)   24 6371.049  16.7837321 2.266103e-04
+15       Phi(~Geschlecht)p(~year)   26 6371.441  17.1761802 1.862347e-04
+3                    Phi(~1)p(~1)    2 6435.237  65.8617376 3.044934e-15
+4           Phi(~1)p(~Geschlecht)    4 6435.418  66.0427770 2.781414e-15
+5           Phi(~Geschlecht)p(~1)    4 6436.331  66.9557190 1.762069e-15
+6  Phi(~Geschlecht)p(~Geschlecht)    6 6439.412  70.0367649 3.775568e-16</code></pre>
+</div>
+</div>
+</section>
+<section id="parameter-estimates-for-best-model-phi.dot_p.temp-3" class="level4">
+<h4 class="anchored" data-anchor-id="parameter-estimates-for-best-model-phi.dot_p.temp-3">Parameter estimates for best model: Phi.dot_p.temp</h4>
+<ul>
+<li><p>Phi = 43% (1st plot, 1st row) -&gt; survival probability higher than in basic model (Phi = 36%)</p></li>
+<li><p>p (1st plot, 2nd row): no clear trend and high variation in detection probability for temperature -&gt; over fitting?</p></li>
+<li><p>Highest amount of sampled individuals for 9°C, higher amounts also for 11° - 19° C (2nd plot)</p></li>
+</ul>
+<p>=&gt; Caution with detection estimates: neglect of capture data before 2004 and wide confidence interval around estimates</p>
+<table class="table">
+<tbody>
+<tr class="odd">
+<td><img src="images/bartmeise.png" class="img-fluid"></td>
+</tr>
+<tr class="even">
+<td><img src="images/ggplot_sp_capt_tmp_02.png" class="img-fluid"></td>
+</tr>
+</tbody>
+</table>
+</section>
+</section>
+<section id="blaumeise-eurasian-blue-tit-cyanistes-caeruleus" class="level3">
+<h3 class="anchored" data-anchor-id="blaumeise-eurasian-blue-tit-cyanistes-caeruleus"><strong>Blaumeise / Eurasian Blue Tit</strong> (<em>Cyanistes caeruleus)</em></h3>
+<section id="aic-values-of-six-best-models-7" class="level4">
+<h4 class="anchored" data-anchor-id="aic-values-of-six-best-models-7">AIC values of six best models</h4>
+<ul>
+<li><p>11 models better than basic model</p></li>
+<li><p>For phi time interval best variable, otherwise sex</p></li>
+<li><p>For p sex or no covariate best, otherwise observer (= “initials”)</p></li>
+</ul>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb15"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb15-1"><a href="#cb15-1" aria-hidden="true" tabindex="-1"></a>AIC_Blaumeise <span class="ot">&lt;-</span> <span class="fu">read.csv</span>(<span class="st">"AIC/AIC_Blaumeise.csv"</span>)</span>
+<span id="cb15-2"><a href="#cb15-2" aria-hidden="true" tabindex="-1"></a>AIC_Blaumeise[<span class="fu">order</span>(AIC_Blaumeise<span class="sc">$</span>AIC),<span class="dv">2</span><span class="sc">:</span><span class="dv">6</span>]</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>                            model npar      AIC   DeltaAIC       weight
+10       Phi(~time)p(~Geschlecht)   25 400.6912  0.0000000 9.830211e-01
+11                Phi(~time)p(~1)   23 408.9718  8.2806553 1.564737e-02
+12         Phi(~time)p(~Initials)   32 413.8998 13.2086630 1.331491e-03
+1  Phi(~Geschlecht)p(~Geschlecht)    6 418.3915  0.0000000 3.565495e-01
+2           Phi(~1)p(~Geschlecht)    4 418.9532  0.5617354 2.692406e-01
+7        Phi(~Geschlecht)p(~time)   25 419.0120  0.0000000 5.623371e-01
+3             Phi(~1)p(~Initials)   11 420.0041  1.6125939 1.592024e-01
+8                 Phi(~1)p(~time)   23 420.0457  1.0336679 3.353811e-01
+4           Phi(~Geschlecht)p(~1)    4 420.8839  2.4924313 1.025405e-01
+5    Phi(~Geschlecht)p(~Initials)   13 421.0984  2.7069594 9.211091e-02
+9              Phi(~time)p(~time)   44 422.4207  3.4087388 1.022818e-01
+6                    Phi(~1)p(~1)    2 424.1177  5.7261853 2.035610e-02
+13                Phi(~1)p(~year)   23 438.3353  0.0000000 5.428295e-01
+14       Phi(~Geschlecht)p(~year)   25 438.6788  0.3434860 4.571686e-01
+15             Phi(~year)p(~year)   44 463.4009 25.0656740 1.957589e-06
+16                Phi(~1)p(~Temp)   94 474.1506  0.0000000 1.000000e+00
+17                Phi(~Temp)p(~1)   94 483.0189  0.0000000 1.000000e+00
+18   Phi(~Geschlecht * Temp)p(~1)  182 619.4830  0.0000000 1.000000e+00</code></pre>
+</div>
+</div>
+</section>
+<section id="parameter-estimates-for-best-model-phi.time_p.sex" class="level4">
+<h4 class="anchored" data-anchor-id="parameter-estimates-for-best-model-phi.time_p.sex">Parameter estimates for best model: Phi.time_p.sex</h4>
+<ul>
+<li><p>Statistical significant differences in detection probability between male and unknown sex (left plot, 1st row)</p>
+<ul>
+<li><p>Male: p = 66%, unknown: p = 22%, female: p = 100%</p></li>
+<li><p>No statistical significance for female estimate due to large confidence interval</p></li>
+</ul></li>
+<li><p>Large proportion of unknown sex within individuals sampled over the years (left plot, 2nd row) and within individuals sampled only once (right plot, 2nd row) -&gt; might lead to statistical artefacts</p></li>
+<li><p>Several peaks of survival probability over the entire sampling period assuming an even time interval (left plot, 1st row): not a clear trend visible</p></li>
+<li><p>Peaks in survival probability almost oppose peaks in distribution of sampled individuals over the years (right plot, 1st row)</p></li>
+<li><p>Large confidence interval around survival estimates -&gt; statistical significance questionable</p></li>
+</ul>
+<table class="table">
+<colgroup>
+<col style="width: 50%">
+<col style="width: 49%">
+</colgroup>
+<tbody>
+<tr class="odd">
+<td><img src="images/blaumeise.png" class="img-fluid"></td>
+<td><img src="images/ggplot_capt_yr_blm.png" class="img-fluid"></td>
+</tr>
+<tr class="even">
+<td><img src="images/ggplot_sp_sex_yr_11.png" class="img-fluid"></td>
+<td><img src="images/ggplot_sex_cs_11.png" class="img-fluid"></td>
+</tr>
+</tbody>
+</table>
+</section>
+</section>
+<section id="weißsterniges-blaukehlchen-bluethroat-luscinia-svecica" class="level3">
+<h3 class="anchored" data-anchor-id="weißsterniges-blaukehlchen-bluethroat-luscinia-svecica"><strong>Weißsterniges Blaukehlchen / Bluethroat</strong> (<em>Luscinia svecica)</em></h3>
+<section id="aic-values-of-six-best-models-8" class="level4">
+<h4 class="anchored" data-anchor-id="aic-values-of-six-best-models-8">AIC values of six best models</h4>
+<ul>
+<li><p>First four models with lowest AIC and better than basic model</p></li>
+<li><p>For phi no covariate or sex, otherwise time interval also possible</p></li>
+<li><p>For p mainly observer otherwise sex as covariate</p></li>
+</ul>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb17"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb17-1"><a href="#cb17-1" aria-hidden="true" tabindex="-1"></a>AIC_Weißstern <span class="ot">&lt;-</span> <span class="fu">read.csv</span>(<span class="st">"AIC/AIC_Weißstern.csv"</span>)</span>
+<span id="cb17-2"><a href="#cb17-2" aria-hidden="true" tabindex="-1"></a>AIC_Weißstern[<span class="fu">order</span>(AIC_Weißstern<span class="sc">$</span>AIC),<span class="dv">2</span><span class="sc">:</span><span class="dv">6</span>]</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>                            model npar      AIC  DeltaAIC       weight
+1             Phi(~1)p(~Initials)    9 140.5043  0.000000 0.6620045631
+2    Phi(~Geschlecht)p(~Initials)   11 143.8739  3.369532 0.1227938081
+3           Phi(~1)p(~Geschlecht)    4 144.3624  3.858040 0.0961829888
+10         Phi(~time)p(~Initials)   21 144.4767  0.000000 0.6539245497
+4                    Phi(~1)p(~1)    2 145.1497  4.645389 0.0648824952
+5           Phi(~Geschlecht)p(~1)    4 146.0702  5.565909 0.0409486048
+11       Phi(~time)p(~Geschlecht)   16 146.5555  2.078766 0.2312753442
+7                 Phi(~1)p(~time)   14 147.2336  0.000000 0.6681339667
+12                Phi(~time)p(~1)   14 147.9563  3.479599 0.1148001062
+6  Phi(~Geschlecht)p(~Geschlecht)    6 148.3363  7.832000 0.0131875400
+8        Phi(~Geschlecht)p(~time)   16 148.6347  1.401084 0.3316057697
+13                Phi(~1)p(~year)   14 159.7859  0.000000 0.7049816981
+14       Phi(~Geschlecht)p(~year)   16 161.5292  1.743275 0.2948698693
+9              Phi(~time)p(~time)   26 162.9347 15.701098 0.0002602637
+16                Phi(~1)p(~Temp)   37 168.3645  0.000000 1.0000000000
+17                Phi(~Temp)p(~1)   37 170.5625  0.000000 1.0000000000
+15             Phi(~year)p(~year)   26 176.7175 16.931593 0.0001484326
+18   Phi(~Geschlecht * Temp)p(~1)   57 202.9196  0.000000 1.0000000000</code></pre>
+</div>
+</div>
+</section>
+<section id="parameter-estimates-for-best-model-phi.dot_p.initials" class="level4">
+<h4 class="anchored" data-anchor-id="parameter-estimates-for-best-model-phi.dot_p.initials">Parameter estimates for best model: Phi.dot_p.initials</h4>
+<ul>
+<li><p>Phi = 70% (1st plot, 1st row) -&gt; survival probability higher than in basic model (Phi = 64%)</p></li>
+<li><p>Statistical differences in detection probability likely between observer “DT” or “SG” and “SR”</p></li>
+<li><p>SR has largest amount of sampled individuals (2nd plot) -&gt; significantly lower detection probability possibly due to disproportional large amount of individuals only captured once</p></li>
+<li><p>DT and SG have larger proportion of individuals captured twice or thrice (2nd plot) -&gt; higher detection estimates</p></li>
+<li><p>Confidence interval for estimates of other observers too large -&gt; possibly due to small data and individuals only captured once</p></li>
+</ul>
+<table class="table">
+<tbody>
+<tr class="odd">
+<td><img src="images/weißstern.png" class="img-fluid"></td>
+</tr>
+<tr class="even">
+<td><img src="images/ggplot_ppl_wbk.png" class="img-fluid"></td>
+</tr>
+</tbody>
+</table>
+</section>
+</section>
+<section id="amsel-eurasian-blackbird-turdus-merula" class="level3">
+<h3 class="anchored" data-anchor-id="amsel-eurasian-blackbird-turdus-merula"><strong>Amsel / Eurasian Blackbird</strong> (<em>Turdus merula)</em></h3>
+<section id="aic-values-of-six-best-models-9" class="level4">
+<h4 class="anchored" data-anchor-id="aic-values-of-six-best-models-9">AIC values of six best models</h4>
+<ul>
+<li><p>10 models better than basic model</p></li>
+<li><p>For phi sex or no covariate best, otherwise time interval possible</p></li>
+<li><p>For p time interval best explanatory variable</p></li>
+</ul>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb19"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb19-1"><a href="#cb19-1" aria-hidden="true" tabindex="-1"></a>AIC_Amsel <span class="ot">&lt;-</span> <span class="fu">read.csv</span>(<span class="st">"AIC/AIC_Amsel.csv"</span>)</span>
+<span id="cb19-2"><a href="#cb19-2" aria-hidden="true" tabindex="-1"></a>AIC_Amsel[<span class="fu">order</span>(AIC_Amsel<span class="sc">$</span>AIC),<span class="dv">2</span><span class="sc">:</span><span class="dv">6</span>]</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>                            model npar      AIC   DeltaAIC       weight
+7        Phi(~Geschlecht)p(~time)   25 242.9177  0.0000000 9.169895e-01
+8                 Phi(~1)p(~time)   24 247.7220  4.8043042 8.300858e-02
+9              Phi(~time)p(~time)   46 269.0643 26.1465720 1.926231e-06
+10         Phi(~time)p(~Initials)   31 269.7533  0.0000000 9.496847e-01
+11                Phi(~time)p(~1)   24 276.3549  6.6015890 3.499956e-02
+1    Phi(~Geschlecht)p(~Initials)   10 276.9345  0.0000000 4.982021e-01
+2  Phi(~Geschlecht)p(~Geschlecht)    4 277.4221  0.4875504 3.904229e-01
+12       Phi(~time)p(~Geschlecht)   25 278.0078  8.2544946 1.531577e-02
+3             Phi(~1)p(~Initials)    9 280.2044  3.2698645 9.713226e-02
+4           Phi(~Geschlecht)p(~1)    3 284.1598  7.2252210 1.344215e-02
+5                    Phi(~1)p(~1)    2 290.5743 13.6397856 5.439560e-04
+6           Phi(~1)p(~Geschlecht)    3 292.0771 15.1425760 2.565884e-04
+13       Phi(~Geschlecht)p(~year)   25 302.7599  0.0000000 9.720903e-01
+14                Phi(~1)p(~year)   24 309.8609  7.1009502 2.790968e-02
+17                Phi(~Temp)p(~1)   56 320.3982  0.0000000 1.000000e+00
+16                Phi(~1)p(~Temp)   56 323.8108  0.0000000 1.000000e+00
+15             Phi(~year)p(~year)   46 335.7162 32.9562513 6.781840e-08
+18   Phi(~Geschlecht * Temp)p(~1)   86 372.4479  0.0000000 1.000000e+00</code></pre>
+</div>
+</div>
+</section>
+<section id="parameter-estimates-for-best-model-phi.sex_p.time" class="level4">
+<h4 class="anchored" data-anchor-id="parameter-estimates-for-best-model-phi.sex_p.time">Parameter estimates for best model: Phi.sex_p.time</h4>
+<ul>
+<li><p>Statistical significant differences in survival probability for male and female (left plot, 1st row)</p></li>
+<li><p>Male: Phi = 68%, female: Phi = 43%</p></li>
+<li><p>Sex is 50:50 when captured only one time (right plot, 1st row), when captured twice male proportion is higher and only males are captured four time</p></li>
+<li><p>Several peaks of detection probability over the entire sampling period assuming an even time interval (left plot, 1st row): 2001, 2009/11, 2014-2016, 2018/20/22</p></li>
+<li><p>Peaks in detection probability mirror peaks in distribution of sampled individuals over the years (left plot, 2nd row)</p></li>
+<li><p>Large confidence interval around estimates -&gt; statistical significance questionable</p></li>
+</ul>
+<table class="table">
+<colgroup>
+<col style="width: 51%">
+<col style="width: 48%">
+</colgroup>
+<tbody>
+<tr class="odd">
+<td><img src="images/amsel.png" class="img-fluid"></td>
+<td><img src="images/ggplot_sex_cs_09.png" class="img-fluid"></td>
+</tr>
+<tr class="even">
+<td><img src="images/ggplot_capt_yr_ams.png" class="img-fluid"></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+</section>
+</section>
+<section id="feldsperling-eurasian-tree-sparrow-passer-montanus" class="level3">
+<h3 class="anchored" data-anchor-id="feldsperling-eurasian-tree-sparrow-passer-montanus"><strong>Feldsperling / Eurasian Tree Sparrow</strong> (<em>Passer montanus)</em></h3>
+<section id="aic-values-of-six-best-models-10" class="level4">
+<h4 class="anchored" data-anchor-id="aic-values-of-six-best-models-10">AIC values of six best models</h4>
+<ul>
+<li><p>Almost all models better than basic model</p></li>
+<li><p>For phi temperature or no covariate best, otherwise sex</p></li>
+<li><p>For p no covariate or temperature best, otherwise time interval or observer</p></li>
+</ul>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb21"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb21-1"><a href="#cb21-1" aria-hidden="true" tabindex="-1"></a>AIC_Feldsperling <span class="ot">&lt;-</span> <span class="fu">read.csv</span>(<span class="st">"AIC/AIC_Feldsperling.csv"</span>)</span>
+<span id="cb21-2"><a href="#cb21-2" aria-hidden="true" tabindex="-1"></a>AIC_Feldsperling[<span class="fu">order</span>(AIC_Feldsperling<span class="sc">$</span>AIC),<span class="dv">2</span><span class="sc">:</span><span class="dv">6</span>]</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>                            model npar      AIC  DeltaAIC       weight
+17                Phi(~Temp)p(~1)   79 238.6562  0.000000 1.000000e+00
+16                Phi(~1)p(~Temp)   79 239.2720  0.000000 1.000000e+00
+7        Phi(~Geschlecht)p(~time)   26 262.8268  0.000000 9.998865e-01
+1    Phi(~Geschlecht)p(~Initials)   12 267.7047  0.000000 9.378275e-01
+2             Phi(~1)p(~Initials)   10 273.1473  5.442531 6.170102e-02
+8                 Phi(~1)p(~time)   24 280.9947 18.167898 1.134597e-04
+3  Phi(~Geschlecht)p(~Geschlecht)    6 283.2507 15.545981 3.947809e-04
+10         Phi(~time)p(~Initials)   32 284.3440  0.000000 6.570371e-01
+11       Phi(~time)p(~Geschlecht)   26 285.6459  1.301897 3.426783e-01
+4           Phi(~Geschlecht)p(~1)    4 287.1620 19.457219 5.585237e-05
+5           Phi(~1)p(~Geschlecht)    4 289.1388 21.434048 2.078637e-05
+13       Phi(~Geschlecht)p(~year)   26 292.0866  0.000000 9.970155e-01
+12                Phi(~time)p(~1)   24 299.8328 15.488807 2.846022e-04
+6                    Phi(~1)p(~1)    2 302.2980 34.593236 2.886005e-08
+14                Phi(~1)p(~year)   24 303.7093 11.622701 2.984452e-03
+9              Phi(~time)p(~time)   46 310.3343 47.507546 4.828567e-11
+15             Phi(~year)p(~year)   46 343.3584 51.271800 7.331147e-12
+18   Phi(~Geschlecht * Temp)p(~1)  145 360.0946  0.000000 1.000000e+00</code></pre>
+</div>
+</div>
+</section>
+<section id="parameter-estimates-for-best-model-phi.temp_p.dot-2" class="level4">
+<h4 class="anchored" data-anchor-id="parameter-estimates-for-best-model-phi.temp_p.dot-2">Parameter estimates for best model: Phi.temp_p.dot</h4>
+<ul>
+<li><p>p = 45% (1st plot, 2nd row) detection probability higher than in basic model (p = 27%)</p></li>
+<li><p>Phi (1st plot, 1st row): no clear trend in detection probability for temperature</p>
+<ul>
+<li>Several survival peaks over entire temperature range -&gt; problem of over fitting?</li>
+</ul></li>
+<li><p>Wide distribution with several peaks in number of sampled individuals over entire temperature range (2nd plot)</p>
+<ul>
+<li>At around 10°C one individual, which has been captured twice and one four times -&gt; might contribute to higher survival estimate for this temperature in model?</li>
+</ul></li>
+</ul>
+<p>=&gt; Caution with survival estimates: neglect of capture data before 2004 and wide confidence interval around estimates</p>
+<table class="table">
+<tbody>
+<tr class="odd">
+<td><img src="images/feldsperling.png" class="img-fluid"></td>
+</tr>
+<tr class="even">
+<td><img src="images/ggplot_sp_capt_tmp_01.png" class="img-fluid"></td>
+</tr>
+</tbody>
+</table>
+</section>
+</section>
+<section id="goldammer-yellowhammer-emberiza-citrinella" class="level3">
+<h3 class="anchored" data-anchor-id="goldammer-yellowhammer-emberiza-citrinella"><strong>Goldammer / Yellowhammer</strong> (<em>Emberiza citrinella)</em></h3>
+<section id="aic-values-of-six-best-models-11" class="level4">
+<h4 class="anchored" data-anchor-id="aic-values-of-six-best-models-11">AIC values of six best models</h4>
+<ul>
+<li><p>Almost all models better than basic model</p></li>
+<li><p>For phi sex or no covariate best, otherwise time interval</p></li>
+<li><p>For p time interval best, otherwise observer</p></li>
+</ul>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb23"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb23-1"><a href="#cb23-1" aria-hidden="true" tabindex="-1"></a>AIC_Goldammer <span class="ot">&lt;-</span> <span class="fu">read.csv</span>(<span class="st">"AIC/AIC_Goldammer.csv"</span>)</span>
+<span id="cb23-2"><a href="#cb23-2" aria-hidden="true" tabindex="-1"></a>AIC_Goldammer[<span class="fu">order</span>(AIC_Goldammer<span class="sc">$</span>AIC),<span class="dv">2</span><span class="sc">:</span><span class="dv">6</span>]</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>                            model npar      AIC  DeltaAIC       weight
+7        Phi(~Geschlecht)p(~time)   26 435.1106  0.000000 9.499051e-01
+8                 Phi(~1)p(~time)   24 441.1541  6.043477 4.627602e-02
+9              Phi(~time)p(~time)   46 446.1434 11.032822 3.818857e-03
+10         Phi(~time)p(~Initials)   32 447.6426  0.000000 9.819906e-01
+1    Phi(~Geschlecht)p(~Initials)   12 449.2835  0.000000 8.771144e-01
+2             Phi(~1)p(~Initials)   10 453.2515  3.967985 1.206200e-01
+11       Phi(~time)p(~Geschlecht)   26 455.9067  8.264115 1.576077e-02
+12                Phi(~time)p(~1)   24 459.8011 12.158529 2.248621e-03
+3  Phi(~Geschlecht)p(~Geschlecht)    6 462.1208 12.837328 1.430428e-03
+4           Phi(~1)p(~Geschlecht)    4 463.7774 14.493946 6.247927e-04
+5           Phi(~Geschlecht)p(~1)    4 466.1518 16.868344 1.906083e-04
+13       Phi(~Geschlecht)p(~year)   27 467.9430  0.000000 8.257069e-01
+6                    Phi(~1)p(~1)    2 470.6814 21.397933 1.979494e-05
+14                Phi(~1)p(~year)   25 471.0540  3.111030 1.742907e-01
+15             Phi(~year)p(~year)   48 493.4928 25.549755 2.337583e-06
+16                Phi(~1)p(~Temp)   89 499.9209  0.000000 1.000000e+00
+17                Phi(~Temp)p(~1)   89 506.4987  0.000000 1.000000e+00
+18   Phi(~Geschlecht * Temp)p(~1)  147 598.0205  0.000000 1.000000e+00</code></pre>
+</div>
+</div>
+</section>
+<section id="parameter-estimates-for-best-model-phi.sex_p.time-1" class="level4">
+<h4 class="anchored" data-anchor-id="parameter-estimates-for-best-model-phi.sex_p.time-1">Parameter estimates for best model: Phi.sex_p.time</h4>
+<ul>
+<li><p>Statistical significant differences in survival probability for male and female (left plot, 1st row)</p>
+<ul>
+<li>Male: Phi = 56%, female: Phi = 34%, unknown sex: Phi = 55%</li>
+</ul></li>
+<li><p>Proportion between male and female almost 50:50 when captured only one time (right plot, 1st row), when captured twice or thrice male proportion is two-thirds higher than female -&gt; might contribute to higher Phi in male</p></li>
+<li><p>Several peaks of detection probability over entire sampling period assuming an even time interval (left plot, 1st row):</p>
+<ul>
+<li><p>Slightly declining trend in survival probability after 2013, otherwise no trend recognizable</p></li>
+<li><p>Large confidence interval around estimates -&gt; statistical significance questionable</p></li>
+</ul></li>
+<li><p>Wide distribution with several peaks in number of sampled individuals over entire sampling period (2nd plot)</p>
+<ul>
+<li>Between 2011 and 2017 individuals captured up to three times</li>
+</ul></li>
+</ul>
+<table class="table">
+<colgroup>
+<col style="width: 52%">
+<col style="width: 47%">
+</colgroup>
+<tbody>
+<tr class="odd">
+<td><img src="images/goldammer.png" class="img-fluid"></td>
+<td><img src="images/ggplot_sex_cs_10.png" class="img-fluid"></td>
+</tr>
+<tr class="even">
+<td><img src="images/ggplot_sp_capt_yr_10.png" class="img-fluid"></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+</section>
+</section>
+<section id="rohrammer-reed-bunting-emberiza-schoeniclus" class="level3">
+<h3 class="anchored" data-anchor-id="rohrammer-reed-bunting-emberiza-schoeniclus"><strong>Rohrammer / Reed Bunting</strong> (<em>Emberiza schoeniclus)</em></h3>
+<section id="aic-values-of-six-best-models-12" class="level4">
+<h4 class="anchored" data-anchor-id="aic-values-of-six-best-models-12">AIC values of six best models</h4>
+<ul>
+<li><p>Almost all models better than basic model</p></li>
+<li><p>For phi no covariate or temperature best, otherwise sex or time interval</p></li>
+<li><p>For p temperature or no covariate best, otherwise observer</p></li>
+</ul>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb25"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb25-1"><a href="#cb25-1" aria-hidden="true" tabindex="-1"></a>AIC_Rohrammer <span class="ot">&lt;-</span> <span class="fu">read.csv</span>(<span class="st">"AIC/AIC_Rohrammer.csv"</span>)</span>
+<span id="cb25-2"><a href="#cb25-2" aria-hidden="true" tabindex="-1"></a>AIC_Rohrammer[<span class="fu">order</span>(AIC_Rohrammer<span class="sc">$</span>AIC),<span class="dv">2</span><span class="sc">:</span><span class="dv">6</span>]</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>                            model npar      AIC  DeltaAIC       weight
+16                Phi(~1)p(~Temp)  136 3558.513  0.000000 1.000000e+00
+17                Phi(~Temp)p(~1)  136 3606.584  0.000000 1.000000e+00
+18   Phi(~Geschlecht * Temp)p(~1)  267 3682.200  0.000000 1.000000e+00
+10         Phi(~time)p(~Initials)   35 4538.639  0.000000 8.315480e-01
+11       Phi(~time)p(~Geschlecht)   26 4541.833  3.193276 1.684520e-01
+1    Phi(~Geschlecht)p(~Initials)   15 4553.993  0.000000 9.999965e-01
+7        Phi(~Geschlecht)p(~time)   26 4558.104  0.000000 9.999947e-01
+12                Phi(~time)p(~1)   24 4575.240 36.600252 9.380879e-09
+2             Phi(~1)p(~Initials)   13 4579.144 25.151489 3.454794e-06
+8                 Phi(~1)p(~time)   24 4582.700 24.595635 4.561665e-06
+9              Phi(~time)p(~time)   46 4586.394 28.289438 7.194893e-07
+3           Phi(~1)p(~Geschlecht)    4 4588.889 34.896331 2.644579e-08
+4  Phi(~Geschlecht)p(~Geschlecht)    6 4591.509 37.515920 7.137070e-09
+5           Phi(~Geschlecht)p(~1)    4 4596.778 42.784658 5.121865e-10
+13       Phi(~Geschlecht)p(~year)   27 4607.015  0.000000 9.999839e-01
+6                    Phi(~1)p(~1)    2 4621.514 67.521444 2.177224e-15
+14                Phi(~1)p(~year)   25 4629.122 22.107027 1.583117e-05
+15             Phi(~year)p(~year)   48 4636.979 29.963488 3.115331e-07</code></pre>
+</div>
+</div>
+</section>
+<section id="parameter-estimates-for-best-model-phi.dot_p.temp-4" class="level4">
+<h4 class="anchored" data-anchor-id="parameter-estimates-for-best-model-phi.dot_p.temp-4">Parameter estimates for best model: Phi.dot_p.temp</h4>
+<ul>
+<li><p>Phi = 49% (1st plot, 1st row) -&gt; survival probability higher than in basic model (Phi = 43%)</p></li>
+<li><p>p (1st plot, 2nd row): no clear trend and high variation in detection probability for temperature -&gt; over fitting?</p></li>
+<li><p>Wide distribution with several peaks in number of sampled individuals over entire temperature range (2nd plot)</p></li>
+</ul>
+<p>=&gt; Caution with detection estimates: neglect of capture data before 2004 and wide confidence interval around estimates</p>
+<table class="table">
+<tbody>
+<tr class="odd">
+<td><img src="images/rohrammer.png" class="img-fluid"></td>
+</tr>
+<tr class="even">
+<td><img src="images/ggplot_sp_capt_tmp_03.png" class="img-fluid"></td>
+</tr>
+</tbody>
+</table>
+</section>
+</section>
+</section>
+</section>
+<section id="summary" class="level1">
+<h1>Summary</h1>
+<ul>
+<li><p>Abundance trends of</p>
+<ul>
+<li><p>Schilfrohrsänger, Teichrohrsänger, Bartmeise, Rohrammer: decline during 2006 and 2018</p></li>
+<li><p>Weißsterniges Blaukehlchen, Amsel: increase in second half of sampling period</p></li>
+<li><p>Feldsperling: decline over entire sampling period</p></li>
+</ul></li>
+<li><p>Basic model</p>
+<ul>
+<li><p>Survival probability higher than detection probability for most bird taxa, which mostly larger and heavier</p></li>
+<li><p>Survival probability lower than detection probability for 5 bird taxa -&gt; mainly smaller and lighter</p>
+<ul>
+<li>Fitis, Rohrschwirl, Bartmeise, Blaumeise, Feldsperling</li>
+</ul></li>
+</ul></li>
+<li><p>Main covariates for differences in survival and detection probability:</p>
+<ul>
+<li><p>Sex:</p>
+<ul>
+<li><p>Male higher survival probability than female in Amsel, Goldammer;</p></li>
+<li><p>Problemtic with large proportion of unknown sex, like Fitis and Blaumeise</p></li>
+</ul></li>
+<li><p>Even time interval:</p>
+<ul>
+<li><p>Differences in survival probability for each sampling occasion align with abundance distribution only for Amsel</p></li>
+<li><p>Rather complex model with little explanantory value for Blaumeise and Goldammer</p></li>
+<li><p>Suggestion to include effect of uneven time interval</p></li>
+</ul></li>
+<li><p>Observer:</p>
+<ul>
+<li><p>Different detection probability depended on observer only for Weißsterniges Blaukehlchen</p></li>
+<li><p>Suggestion to include effect of observer on detection probability for all taxa, not just one taxa individually</p></li>
+</ul></li>
+<li><p>Temperature:</p>
+<ul>
+<li>most complex model which mostly leads to over fitting and thus little explanatory value especially for Schilfrohrsänger, Teichrohrsänger, Rohrschwirl, Bartmeise, Feldsperling</li>
+</ul></li>
+</ul></li>
+<li><p>Other covariates necessary to explain abundance trends: humidity, weight, life span?</p></li>
+</ul>
+</section>
+
+</main>
+<!-- /main column -->
+<script id="quarto-html-after-body" type="application/javascript">
+window.document.addEventListener("DOMContentLoaded", function (event) {
+  const toggleBodyColorMode = (bsSheetEl) => {
+    const mode = bsSheetEl.getAttribute("data-mode");
+    const bodyEl = window.document.querySelector("body");
+    if (mode === "dark") {
+      bodyEl.classList.add("quarto-dark");
+      bodyEl.classList.remove("quarto-light");
+    } else {
+      bodyEl.classList.add("quarto-light");
+      bodyEl.classList.remove("quarto-dark");
+    }
+  }
+  const toggleBodyColorPrimary = () => {
+    const bsSheetEl = window.document.querySelector("link#quarto-bootstrap");
+    if (bsSheetEl) {
+      toggleBodyColorMode(bsSheetEl);
+    }
+  }
+  toggleBodyColorPrimary();  
+  const icon = "";
+  const anchorJS = new window.AnchorJS();
+  anchorJS.options = {
+    placement: 'right',
+    icon: icon
+  };
+  anchorJS.add('.anchored');
+  const isCodeAnnotation = (el) => {
+    for (const clz of el.classList) {
+      if (clz.startsWith('code-annotation-')) {                     
+        return true;
+      }
+    }
+    return false;
+  }
+  const clipboard = new window.ClipboardJS('.code-copy-button', {
+    text: function(trigger) {
+      const codeEl = trigger.previousElementSibling.cloneNode(true);
+      for (const childEl of codeEl.children) {
+        if (isCodeAnnotation(childEl)) {
+          childEl.remove();
+        }
+      }
+      return codeEl.innerText;
+    }
+  });
+  clipboard.on('success', function(e) {
+    // button target
+    const button = e.trigger;
+    // don't keep focus
+    button.blur();
+    // flash "checked"
+    button.classList.add('code-copy-button-checked');
+    var currentTitle = button.getAttribute("title");
+    button.setAttribute("title", "Copied!");
+    let tooltip;
+    if (window.bootstrap) {
+      button.setAttribute("data-bs-toggle", "tooltip");
+      button.setAttribute("data-bs-placement", "left");
+      button.setAttribute("data-bs-title", "Copied!");
+      tooltip = new bootstrap.Tooltip(button, 
+        { trigger: "manual", 
+          customClass: "code-copy-button-tooltip",
+          offset: [0, -8]});
+      tooltip.show();    
+    }
+    setTimeout(function() {
+      if (tooltip) {
+        tooltip.hide();
+        button.removeAttribute("data-bs-title");
+        button.removeAttribute("data-bs-toggle");
+        button.removeAttribute("data-bs-placement");
+      }
+      button.setAttribute("title", currentTitle);
+      button.classList.remove('code-copy-button-checked');
+    }, 1000);
+    // clear code selection
+    e.clearSelection();
+  });
+    var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
+    var mailtoRegex = new RegExp(/^mailto:/);
+      var filterRegex = new RegExp('/' + window.location.host + '/');
+    var isInternal = (href) => {
+        return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
+    }
+    // Inspect non-navigation links and adorn them if external
+ 	var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool)');
+    for (var i=0; i<links.length; i++) {
+      const link = links[i];
+      if (!isInternal(link.href)) {
+        // undo the damage that might have been done by quarto-nav.js in the case of
+        // links that we want to consider external
+        if (link.dataset.originalHref !== undefined) {
+          link.href = link.dataset.originalHref;
+        }
+      }
+    }
+  function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
+    const config = {
+      allowHTML: true,
+      maxWidth: 500,
+      delay: 100,
+      arrow: false,
+      appendTo: function(el) {
+          return el.parentElement;
+      },
+      interactive: true,
+      interactiveBorder: 10,
+      theme: 'quarto',
+      placement: 'bottom-start',
+    };
+    if (contentFn) {
+      config.content = contentFn;
+    }
+    if (onTriggerFn) {
+      config.onTrigger = onTriggerFn;
+    }
+    if (onUntriggerFn) {
+      config.onUntrigger = onUntriggerFn;
+    }
+    window.tippy(el, config); 
+  }
+  const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+  for (var i=0; i<noterefs.length; i++) {
+    const ref = noterefs[i];
+    tippyHover(ref, function() {
+      // use id or data attribute instead here
+      let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+      try { href = new URL(href).hash; } catch {}
+      const id = href.replace(/^#\/?/, "");
+      const note = window.document.getElementById(id);
+      if (note) {
+        return note.innerHTML;
+      } else {
+        return "";
+      }
+    });
+  }
+  const xrefs = window.document.querySelectorAll('a.quarto-xref');
+  const processXRef = (id, note) => {
+    // Strip column container classes
+    const stripColumnClz = (el) => {
+      el.classList.remove("page-full", "page-columns");
+      if (el.children) {
+        for (const child of el.children) {
+          stripColumnClz(child);
+        }
+      }
+    }
+    stripColumnClz(note)
+    if (id === null || id.startsWith('sec-')) {
+      // Special case sections, only their first couple elements
+      const container = document.createElement("div");
+      if (note.children && note.children.length > 2) {
+        container.appendChild(note.children[0].cloneNode(true));
+        for (let i = 1; i < note.children.length; i++) {
+          const child = note.children[i];
+          if (child.tagName === "P" && child.innerText === "") {
+            continue;
+          } else {
+            container.appendChild(child.cloneNode(true));
+            break;
+          }
+        }
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(container);
+        }
+        return container.innerHTML
+      } else {
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(note);
+        }
+        return note.innerHTML;
+      }
+    } else {
+      // Remove any anchor links if they are present
+      const anchorLink = note.querySelector('a.anchorjs-link');
+      if (anchorLink) {
+        anchorLink.remove();
+      }
+      if (window.Quarto?.typesetMath) {
+        window.Quarto.typesetMath(note);
+      }
+      // TODO in 1.5, we should make sure this works without a callout special case
+      if (note.classList.contains("callout")) {
+        return note.outerHTML;
+      } else {
+        return note.innerHTML;
+      }
+    }
+  }
+  for (var i=0; i<xrefs.length; i++) {
+    const xref = xrefs[i];
+    tippyHover(xref, undefined, function(instance) {
+      instance.disable();
+      let url = xref.getAttribute('href');
+      let hash = undefined; 
+      if (url.startsWith('#')) {
+        hash = url;
+      } else {
+        try { hash = new URL(url).hash; } catch {}
+      }
+      if (hash) {
+        const id = hash.replace(/^#\/?/, "");
+        const note = window.document.getElementById(id);
+        if (note !== null) {
+          try {
+            const html = processXRef(id, note.cloneNode(true));
+            instance.setContent(html);
+          } finally {
+            instance.enable();
+            instance.show();
+          }
+        } else {
+          // See if we can fetch this
+          fetch(url.split('#')[0])
+          .then(res => res.text())
+          .then(html => {
+            const parser = new DOMParser();
+            const htmlDoc = parser.parseFromString(html, "text/html");
+            const note = htmlDoc.getElementById(id);
+            if (note !== null) {
+              const html = processXRef(id, note);
+              instance.setContent(html);
+            } 
+          }).finally(() => {
+            instance.enable();
+            instance.show();
+          });
+        }
+      } else {
+        // See if we can fetch a full url (with no hash to target)
+        // This is a special case and we should probably do some content thinning / targeting
+        fetch(url)
+        .then(res => res.text())
+        .then(html => {
+          const parser = new DOMParser();
+          const htmlDoc = parser.parseFromString(html, "text/html");
+          const note = htmlDoc.querySelector('main.content');
+          if (note !== null) {
+            // This should only happen for chapter cross references
+            // (since there is no id in the URL)
+            // remove the first header
+            if (note.children.length > 0 && note.children[0].tagName === "HEADER") {
+              note.children[0].remove();
+            }
+            const html = processXRef(null, note);
+            instance.setContent(html);
+          } 
+        }).finally(() => {
+          instance.enable();
+          instance.show();
+        });
+      }
+    }, function(instance) {
+    });
+  }
+      let selectedAnnoteEl;
+      const selectorForAnnotation = ( cell, annotation) => {
+        let cellAttr = 'data-code-cell="' + cell + '"';
+        let lineAttr = 'data-code-annotation="' +  annotation + '"';
+        const selector = 'span[' + cellAttr + '][' + lineAttr + ']';
+        return selector;
+      }
+      const selectCodeLines = (annoteEl) => {
+        const doc = window.document;
+        const targetCell = annoteEl.getAttribute("data-target-cell");
+        const targetAnnotation = annoteEl.getAttribute("data-target-annotation");
+        const annoteSpan = window.document.querySelector(selectorForAnnotation(targetCell, targetAnnotation));
+        const lines = annoteSpan.getAttribute("data-code-lines").split(",");
+        const lineIds = lines.map((line) => {
+          return targetCell + "-" + line;
+        })
+        let top = null;
+        let height = null;
+        let parent = null;
+        if (lineIds.length > 0) {
+            //compute the position of the single el (top and bottom and make a div)
+            const el = window.document.getElementById(lineIds[0]);
+            top = el.offsetTop;
+            height = el.offsetHeight;
+            parent = el.parentElement.parentElement;
+          if (lineIds.length > 1) {
+            const lastEl = window.document.getElementById(lineIds[lineIds.length - 1]);
+            const bottom = lastEl.offsetTop + lastEl.offsetHeight;
+            height = bottom - top;
+          }
+          if (top !== null && height !== null && parent !== null) {
+            // cook up a div (if necessary) and position it 
+            let div = window.document.getElementById("code-annotation-line-highlight");
+            if (div === null) {
+              div = window.document.createElement("div");
+              div.setAttribute("id", "code-annotation-line-highlight");
+              div.style.position = 'absolute';
+              parent.appendChild(div);
+            }
+            div.style.top = top - 2 + "px";
+            div.style.height = height + 4 + "px";
+            div.style.left = 0;
+            let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
+            if (gutterDiv === null) {
+              gutterDiv = window.document.createElement("div");
+              gutterDiv.setAttribute("id", "code-annotation-line-highlight-gutter");
+              gutterDiv.style.position = 'absolute';
+              const codeCell = window.document.getElementById(targetCell);
+              const gutter = codeCell.querySelector('.code-annotation-gutter');
+              gutter.appendChild(gutterDiv);
+            }
+            gutterDiv.style.top = top - 2 + "px";
+            gutterDiv.style.height = height + 4 + "px";
+          }
+          selectedAnnoteEl = annoteEl;
+        }
+      };
+      const unselectCodeLines = () => {
+        const elementsIds = ["code-annotation-line-highlight", "code-annotation-line-highlight-gutter"];
+        elementsIds.forEach((elId) => {
+          const div = window.document.getElementById(elId);
+          if (div) {
+            div.remove();
+          }
+        });
+        selectedAnnoteEl = undefined;
+      };
+        // Handle positioning of the toggle
+    window.addEventListener(
+      "resize",
+      throttle(() => {
+        elRect = undefined;
+        if (selectedAnnoteEl) {
+          selectCodeLines(selectedAnnoteEl);
+        }
+      }, 10)
+    );
+    function throttle(fn, ms) {
+    let throttle = false;
+    let timer;
+      return (...args) => {
+        if(!throttle) { // first call gets through
+            fn.apply(this, args);
+            throttle = true;
+        } else { // all the others get throttled
+            if(timer) clearTimeout(timer); // cancel #2
+            timer = setTimeout(() => {
+              fn.apply(this, args);
+              timer = throttle = false;
+            }, ms);
+        }
+      };
+    }
+      // Attach click handler to the DT
+      const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
+      for (const annoteDlNode of annoteDls) {
+        annoteDlNode.addEventListener('click', (event) => {
+          const clickedEl = event.target;
+          if (clickedEl !== selectedAnnoteEl) {
+            unselectCodeLines();
+            const activeEl = window.document.querySelector('dt[data-target-cell].code-annotation-active');
+            if (activeEl) {
+              activeEl.classList.remove('code-annotation-active');
+            }
+            selectCodeLines(clickedEl);
+            clickedEl.classList.add('code-annotation-active');
+          } else {
+            // Unselect the line
+            unselectCodeLines();
+            clickedEl.classList.remove('code-annotation-active');
+          }
+        });
+      }
+  const findCites = (el) => {
+    const parentEl = el.parentElement;
+    if (parentEl) {
+      const cites = parentEl.dataset.cites;
+      if (cites) {
+        return {
+          el,
+          cites: cites.split(' ')
+        };
+      } else {
+        return findCites(el.parentElement)
+      }
+    } else {
+      return undefined;
+    }
+  };
+  var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+  for (var i=0; i<bibliorefs.length; i++) {
+    const ref = bibliorefs[i];
+    const citeInfo = findCites(ref);
+    if (citeInfo) {
+      tippyHover(citeInfo.el, function() {
+        var popup = window.document.createElement('div');
+        citeInfo.cites.forEach(function(cite) {
+          var citeDiv = window.document.createElement('div');
+          citeDiv.classList.add('hanging-indent');
+          citeDiv.classList.add('csl-entry');
+          var biblioDiv = window.document.getElementById('ref-' + cite);
+          if (biblioDiv) {
+            citeDiv.innerHTML = biblioDiv.innerHTML;
+          }
+          popup.appendChild(citeDiv);
+        });
+        return popup.innerHTML;
+      });
+    }
+  }
+});
+</script>
+</div> <!-- /content -->
+
+
+
+
+</body></html>
