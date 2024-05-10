@@ -103,8 +103,6 @@ AIC_Rohrammer <- rbind(model_basic[[1]]$model.table,
 
 write.csv(AIC_Rohrammer,file="data_brandenburg/output/AIC_Rohrammer.csv")
 
-rownames(AIC_Rohrammer) <- AIC_Rohrammer$model
-
 ###Plot Phi.dot_p.tmp:
 
 
@@ -148,7 +146,7 @@ AIC_Goldammer <- rbind(model_basic[[2]]$model.table,
                        model_tmp_phi[[11]]$model.table,
                        model_tmp_sex[[10]]$model.table)
 
-rownames(AIC_Goldammer) <- AIC_Goldammer$model
+write.csv(AIC_Goldammer,file="data_brandenburg/output/AIC_Goldammer.csv")
 
 ###Plot Phi.sex_p.time:
 
@@ -193,7 +191,7 @@ AIC_Gartengrasmücke <- rbind(model_basic[[3]]$model.table,
                        model_tmp_phi[[13]]$model.table,
                        model_tmp_sex[[12]]$model.table)
 
-rownames(AIC_Gartengrasmücke) <- AIC_Gartengrasmücke$model
+write.csv(AIC_Gartengrasmücke,file="data_brandenburg/output/AIC_Gartengrasmücke.csv")
 
 ###Plot Phi.tmp_p.dot:
 
@@ -237,8 +235,7 @@ AIC_Fitis <- rbind(model_basic[[4]]$model.table,
                        model_tmp_phi[[7]]$model.table,
                        model_tmp_sex[[6]]$model.table)
 
-rownames(AIC_Fitis) <- AIC_Fitis$model
-
+write.csv(AIC_Fitis,file="data_brandenburg/output/AIC_Fitis.csv")
 
 ###Plot Phi.sex_p.dot:
 
@@ -280,8 +277,7 @@ AIC_Feldsperling <- rbind(model_basic[[5]]$model.table,
                        model_tmp_phi[[2]]$model.table,
                        model_tmp_sex[[1]]$model.table)
 
-
-rownames(AIC_Feldsperling) <- AIC_Feldsperling$model
+write.csv(AIC_Feldsperling,file="data_brandenburg/output/AIC_Feldsperling.csv")
 
 ###Plot Phi.tmp_p.dot:
 
@@ -324,7 +320,7 @@ AIC_Rohrschwirl <- rbind(model_basic[[6]]$model.table,
                        model_tmp_phi[[8]]$model.table,
                        model_tmp_sex[[7]]$model.table)
 
-rownames(AIC_Rohrschwirl) <- AIC_Rohrschwirl$model
+write.csv(AIC_Rohrschwirl,file="data_brandenburg/output/AIC_Rohrschwirl.csv")
 
 ###Plot Phi.dot_p.tmp:
 
@@ -373,8 +369,7 @@ AIC_Blaumeise <- rbind(model_basic[[7]]$model.table,
                        model_tmp_phi[[12]]$model.table,
                        model_tmp_sex[[11]]$model.table)
 
-
-rownames(AIC_Blaumeise) <- AIC_Blaumeise$model
+write.csv(AIC_Blaumeise,file="data_brandenburg/output/AIC_Blaumeise.csv")
 
 ###Plot Phi.time_p.sex:
 
@@ -417,7 +412,7 @@ AIC_Bartmeise <- rbind(model_basic[[8]]$model.table,
                        model_tmp_phi[[3]]$model.table,
                        model_tmp_sex[[2]]$model.table)
 
-rownames(AIC_Bartmeise) <- AIC_Bartmeise$model
+write.csv(AIC_Bartmeise,file="data_brandenburg/output/AIC_Bartmeise.csv")
 
 ###Plot Phi.dot_p.tmp:
 
@@ -462,7 +457,7 @@ AIC_Amsel <- rbind(model_basic[[9]]$model.table,
                        model_tmp_phi[[10]]$model.table,
                        model_tmp_sex[[9]]$model.table)
 
-rownames(AIC_Amsel) <- AIC_Amsel$model
+write.csv(AIC_Amsel,file="data_brandenburg/output/AIC_Amsel.csv")
 
 ###Plot Phi.sex_p.time:
 
@@ -505,7 +500,7 @@ AIC_Weißstern <- rbind(model_basic[[10]]$model.table,
                        model_tmp_phi[[14]]$model.table,
                        model_tmp_sex[[13]]$model.table)
 
-rownames(AIC_Weißstern) <- AIC_Weißstern$model
+write.csv(AIC_Weißstern,file="data_brandenburg/output/AIC_Weißstern.csv")
 
 ###Plot Phi.dot_p.ppl:
 
@@ -548,7 +543,7 @@ AIC_Teichrohrsänger <- rbind(model_basic[[11]]$model.table,
                        model_tmp_phi[[6]]$model.table,
                        model_tmp_sex[[5]]$model.table)
 
-rownames(AIC_Teichrohrsänger) <- AIC_Teichrohrsänger$model
+write.csv(AIC_Teichrohrsänger,file="data_brandenburg/output/AIC_Teichrohrsänger.csv")
 
 ###Plot Phi.dot_p.tmp:
 
@@ -593,7 +588,7 @@ AIC_Drosselrohrsänger <- rbind(model_basic[[12]]$model.table,
                        model_tmp_phi[[9]]$model.table,
                        model_tmp_sex[[8]]$model.table)
 
-rownames(AIC_Drosselrohrsänger) <- AIC_Drosselrohrsänger$model
+write.csv(AIC_Drosselrohrsänger,file="data_brandenburg/output/AIC_Drosselrohrsänger.csv")
 
 ###Plot Phi.tmp_p.dot:
 
@@ -637,7 +632,7 @@ AIC_Schilfrohrsänger <- rbind(model_basic[[13]]$model.table,
                        model_tmp_phi[[5]]$model.table,
                        model_tmp_sex[[4]]$model.table)
 
-rownames(AIC_Schilfrohrsänger) <- AIC_Schilfrohrsänger$model
+write.csv(AIC_Schilfrohrsänger,file="data_brandenburg/output/AIC_Schilfrohrsänger.csv")
 
 ###Plot Phi.dot_p.tmp:
 
